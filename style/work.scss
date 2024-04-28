@@ -1,0 +1,127 @@
+$default-f: 1.5vw;
+$mobile-f: 5.4vw;
+$lh: 1.4em;
+// line height
+$padding: 0 2.5vw 0 2.5vw;
+$vh-space: 4vh;
+
+#underline {
+  text-decoration: underline;
+}
+
+
+/* WORK 인덱스 */
+body {
+  .category {
+    font-size: 1rem;
+    color: var(--lightgray);
+
+    margin-top: calc($vh-space * 2.5);
+    margin-bottom: $vh-space;
+
+    #selected {
+      color: black;
+    }
+
+    >a {
+      margin-right: 1.25em;
+    }
+
+    >a:hover {
+      color: gray;
+      transition: all 0.2s linear;
+    }
+  }
+
+
+  /* 바디 내용 시작 web web 웹 */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .box {
+      letter-spacing: -0.02em;
+
+      width: 23.3vw;
+      height: calc(23.3vw * 1.15);
+
+      display: flex;
+      flex-direction: column;
+
+      // 상위 정렬, 가로 중앙 정렬, 텍스트 중앙 정렬
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+
+
+      .thumbnail-box {
+        margin-bottom: .85rem;
+
+        width: 23.3vw;
+        height: 16vw;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >img {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          /* 이미지 정 사이즈 */
+          object-fit: cover
+        }
+
+        .thumbnail:hover {
+          transform: scale(1.03);
+          transition: all 0.2s linear;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/* 모바일사이즈  모바일사이즈  모바일사이즈 */
+@media only screen and (max-width: 700px) {
+
+  body {
+
+    .category {
+      margin-top: calc($vh-space * 2.5);
+
+      line-height: 1.5em;
+
+      >a {
+        margin-right: .6em;
+      }
+    }
+
+    /* 바디  바디  바디 mobile */
+    .container {
+      display: flex;
+      flex-direction: column;
+
+      .box {
+        margin-bottom: calc($vh-space * 1.2);
+
+        width: 100%;
+        height: 42vh;
+
+        .thumbnail-box {
+          width: 100%;
+          height: 12rem;
+        }
+      }
+    }
+  }
+
+
+
+
+}

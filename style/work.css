@@ -1,0 +1,88 @@
+@charset "UTF-8";
+#underline {
+  text-decoration: underline;
+}
+
+/* WORK 인덱스 */
+body {
+  /* 바디 내용 시작 web web 웹 */
+}
+body .category {
+  font-size: 1rem;
+  color: var(--lightgray);
+  margin-top: 10vh;
+  margin-bottom: 4vh;
+}
+body .category #selected {
+  color: black;
+}
+body .category > a {
+  margin-right: 1.25em;
+}
+body .category > a:hover {
+  color: gray;
+  transition: all 0.2s linear;
+}
+body .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body .container .box {
+  letter-spacing: -0.02em;
+  width: 23.3vw;
+  height: 26.795vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+body .container .box .thumbnail-box {
+  margin-bottom: 0.85rem;
+  width: 23.3vw;
+  height: 16vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .box .thumbnail-box > img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* 이미지 정 사이즈 */
+  object-fit: cover;
+}
+body .container .box .thumbnail-box .thumbnail:hover {
+  transform: scale(1.03);
+  transition: all 0.2s linear;
+  opacity: 0.5;
+}
+
+/* 모바일사이즈  모바일사이즈  모바일사이즈 */
+@media only screen and (max-width: 700px) {
+  body {
+    /* 바디  바디  바디 mobile */
+  }
+  body .category {
+    margin-top: 10vh;
+    line-height: 1.5em;
+  }
+  body .category > a {
+    margin-right: 0.6em;
+  }
+  body .container {
+    display: flex;
+    flex-direction: column;
+  }
+  body .container .box {
+    margin-bottom: 4.8vh;
+    width: 100%;
+    height: 42vh;
+  }
+  body .container .box .thumbnail-box {
+    width: 100%;
+    height: 12rem;
+  }
+}

@@ -1,0 +1,240 @@
+$default-f: 1.5vw;
+$mobile-f: 5.4vw;
+$lh: 1.4em;
+// line height
+$padding: 0 2.5vw 0 2.5vw;
+$vh-space: 4vh;
+
+#underline {
+  text-decoration: underline;
+}
+
+
+/* 바디 내용 시작 */
+
+body {
+  .container {
+    margin-top: calc($vh-space * 2);
+    margin-bottom: calc($vh-space * 2);
+
+    /* 프로젝트 설명 */
+    .project-info {
+      margin-top: calc($vh-space * 1.25);
+      margin-bottom: calc($vh-space * 2);
+
+      display: flex;
+
+      .info_left {
+        width: 50%;
+        padding-right: 5vw;
+
+        .title {
+          font-size: 2.25rem;
+          line-height: 1.15em;
+        }
+      }
+
+      .info_right {
+        flex: 1;
+
+        padding-right: 5vw;
+
+        .caption {
+          font-size: 1em;
+          margin-bottom: 2em;
+        }
+
+        /* 크레딧 */
+        .credit_box {
+          display: flex;
+
+          border-top: 1px solid black;
+          margin-top: 0.4em;
+          padding-top: 0.4em;
+
+          .credit_1 {
+            width: 30%;
+          }
+
+          .credit_2 {
+            flex: 1;
+          }
+
+          /* 연결 페이지가 있는 경우 */
+          .info-page {
+            color: gray;
+            margin-right: 5vw;
+            margin-bottom: 3.3vw;
+
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+
+
+    /*프로젝트 중간글*/
+    .mid_text {
+      color: black;
+      text-align: center;
+      padding: 3.5vh 0 6vh 0;
+    }
+
+
+    /* 프로젝트 중간글 더블더블 */
+    .mid_text_double {
+      margin-top: calc($vh-space * 1.25);
+      margin-bottom: calc($vh-space * 2);
+
+      display: flex;
+
+      .text_left {
+        width: 50%;
+        padding-right: 5vw;
+      }
+
+      .text_right {
+        flex: 1;
+        /* 줄글 조정하기 */
+        padding-right: 5vw;
+      }
+    }
+
+    /*IMG IMG 이미지 설정*/
+
+    img {
+      max-width: 100%;
+      height: auto;
+
+      margin-bottom: $vh-space;
+    }
+
+    /*세로이미지*/
+    .img-vertical {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: $vh-space;
+    }
+
+    .img-vertical>img {
+      width: 50%;
+      margin: 0;
+    }
+
+
+    /* 유튜브 링크 */
+    .youtube {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow-y: hidden;
+
+      margin-bottom: $vh-space;
+
+      iframe,
+      object,
+      embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        word-wrap: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+/* 모바일사이즈  모바일사이즈  모바일사이즈 */
+@media only screen and (max-width: 700px) {
+  body {
+    .container {
+      margin-top: calc($vh-space * 1.8);
+
+      /* 프로젝트 설명 모바일사이즈 */
+      .project-info {
+        margin-top: $vh-space;
+        margin-bottom: calc($vh-space * 1.5);
+
+        flex-direction: column;
+
+        .info_left {
+          width: 80vw;
+
+          .title {
+            font-size: 1.6rem;
+            margin-bottom: calc($vh-space * 0.75);
+          }
+        }
+
+        .info_right {
+          padding-right: 0vw;
+
+          .caption {
+            margin-bottom: calc($vh-space * 0.75);
+          }
+
+          /* 프로젝트 크레딧 모바일*/
+          .credit_box {
+            font-size: .94em;
+            line-height: 1.2em
+          }
+
+          .credit_1 {
+            width: 24%;
+          }
+
+          .info-page {
+            margin-left: 12vw;
+            margin-bottom: 5vw;
+          }
+        }
+      }
+
+      /*IMG IMG 중간 글 모바일*/
+      .mid_text {
+        padding: 3.5vw 2.5vw 6vw 2.5vw;
+      }
+
+      /* 프로젝트 중간글 더블더블 */
+      .mid_text_double {
+        margin-top: calc($vh-space * .75);
+        margin-bottom: calc($vh-space * .75);
+
+        flex-direction: column;
+
+        .text_left {
+          width: 100%;
+          padding-right: 5vw;
+        }
+
+        .text_right {
+          margin-top: calc($vh-space * 1);
+        }
+      }
+
+      /*IMG IMG 이미지 설정 모바일*/
+      img {
+        margin-bottom: 1.25vh;
+      }
+
+      /*세로이미지*/
+      .img-vertical {
+        margin-bottom: 1.25vh;
+
+        img {
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      .youtube {
+        margin-bottom: 1.25vh;
+      }
+    }
+  }
+}

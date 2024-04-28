@@ -1,0 +1,210 @@
+// 단축어 설정
+:root {
+  --blue: rgb(60, 145, 255);
+  --red: rgb(255, 115, 90);
+  --lightgray: rgb(220, 220, 220);
+}
+
+
+$default-f: 1.5vw;
+$mobile-f: 5.4vw;
+$lh: 1.4em;
+// line height
+$padding: 0 2.5vw 0 2.5vw;
+$vh-space: 4vh;
+
+#underline {
+  text-decoration: underline;
+}
+
+
+/* 한글 폰트 */
+@font-face {
+  font-family: "gothica1";
+  src: url(/00_source_default/Gothica1/GothicA1-Medium.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "gothica1";
+  src: url(/00_source_default/Gothica1/GothicA1-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "gothica1";
+  src: url(/source_default/Gothica1/GothicA1-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+/* 영문 폰트 */
+@font-face {
+  font-family: "gravur";
+  src: url(/source_default/Gravur-Condensed-Regular.ttf);
+  font-weight: 400;
+}
+
+
+
+// 기본 설정
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  text-decoration: none;
+
+  position: relative;
+
+  font-family: "gravur", "gothica1", sans-serif;
+  font-weight: 400;
+  word-break: keep-all;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  // 부모요소의 컬러 물려받기.
+}
+
+// 드래그 시 컬러 변경
+::selection {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(60, 145, 255);
+}
+
+img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+
+html {
+  font-size: $default-f;
+  line-height: $lh;
+}
+
+
+body {
+  padding: $padding;
+
+  // HEADER 헤더
+  header {
+    margin: 3vh 0 4vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    //  HEADER 헤더 제목
+    .header_name {
+      font-size: 1.5rem;
+    }
+
+    .header_name:hover {
+      color: gray;
+    }
+
+    .header_menu {
+      font-size: 1.5rem;
+      position: absolute;
+      right: .25rem;
+    }
+
+    #menu {
+      margin-left: 2vw;
+      color: rgb(0, 0, 0, 1);
+    }
+
+    #menu:hover {
+      color: rgba(0, 0, 0, 0.45);
+
+      transition: all 0.2s ease-in;
+    }
+  }
+
+  /* FOOTER 하단바 웹사이즈 */
+  footer {
+    background-color: var(--lightgray);
+    margin: 0 -2.5vw 0 -2.5vw;
+    padding: $padding;
+    padding-top: $vh-space;
+    padding-bottom: $vh-space;
+    display: flex;
+
+    font-size: 1rem;
+    line-height: $lh;
+
+    .footer_box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $vh-space;
+
+      .footer_left {
+        width: 50vw;
+        padding-right: 8vw;
+      }
+
+      .footer_right {
+        flex: 1;
+        padding-right: 8vw;
+      }
+    }
+  }
+}
+
+
+
+
+
+/* 모바일사이즈  모바일사이즈  모바일사이즈 모바일사이즈  모바일사이즈  모바일사이즈 */
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: $mobile-f;
+
+    body {
+      padding: $padding;
+
+      header {
+        margin: 1.5vh 0 1.5vh 0;
+
+        .header_name {
+          font-size: 1.1rem;
+        }
+
+        /*HEADER 헤더 모바일사이즈*/
+        .header_menu {
+          font-size: 1.1rem;
+        }
+
+        #menu {
+          margin-left: 2vw;
+        }
+      }
+
+
+      /* FOOTER 하단바 모바일사이즈 */
+      footer {
+        font-size: .75rem;
+
+        margin: 0 -2.5vw 0 -2.5vw;
+        padding-top: calc($vh-space * 0.7);
+        padding-left: 1rem;
+
+        .footer_box {
+          margin-bottom: 0;
+
+          .footer_left {
+            width: 40vw;
+            margin-right: 5vw;
+          }
+        }
+      }
+    }
+  }
+}

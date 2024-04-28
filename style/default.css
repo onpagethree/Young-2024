@@ -1,0 +1,158 @@
+@charset "UTF-8";
+:root {
+  --blue: rgb(60, 145, 255);
+  --red: rgb(255, 115, 90);
+  --lightgray: rgb(220, 220, 220);
+}
+
+#underline {
+  text-decoration: underline;
+}
+
+/* 한글 폰트 */
+@font-face {
+  font-family: "gothica1";
+  src: url(/00_source_default/Gothica1/GothicA1-Medium.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "gothica1";
+  src: url(/00_source_default/Gothica1/GothicA1-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "gothica1";
+  src: url(/source_default/Gothica1/GothicA1-ExtraBold.ttf);
+  font-weight: 800;
+}
+/* 영문 폰트 */
+@font-face {
+  font-family: "gravur";
+  src: url(/source_default/Gravur-Condensed-Regular.ttf);
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  position: relative;
+  font-family: "gravur", "gothica1", sans-serif;
+  font-weight: 400;
+  word-break: keep-all;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(60, 145, 255);
+}
+
+img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 1.5vw;
+  line-height: 1.4em;
+}
+
+body {
+  padding: 0 2.5vw 0 2.5vw;
+  /* FOOTER 하단바 웹사이즈 */
+}
+body header {
+  margin: 3vh 0 4vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body header .header_name {
+  font-size: 1.5rem;
+}
+body header .header_name:hover {
+  color: gray;
+}
+body header .header_menu {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0.25rem;
+}
+body header #menu {
+  margin-left: 2vw;
+  color: rgb(0, 0, 0);
+}
+body header #menu:hover {
+  color: rgba(0, 0, 0, 0.45);
+  transition: all 0.2s ease-in;
+}
+body footer {
+  background-color: var(--lightgray);
+  margin: 0 -2.5vw 0 -2.5vw;
+  padding: 0 2.5vw 0 2.5vw;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  display: flex;
+  font-size: 1rem;
+  line-height: 1.4em;
+}
+body footer .footer_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+body footer .footer_box .footer_left {
+  width: 50vw;
+  padding-right: 8vw;
+}
+body footer .footer_box .footer_right {
+  flex: 1;
+  padding-right: 8vw;
+}
+
+/* 모바일사이즈  모바일사이즈  모바일사이즈 모바일사이즈  모바일사이즈  모바일사이즈 */
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 5.4vw;
+  }
+  html body {
+    padding: 0 2.5vw 0 2.5vw;
+    /* FOOTER 하단바 모바일사이즈 */
+  }
+  html body header {
+    margin: 1.5vh 0 1.5vh 0;
+    /*HEADER 헤더 모바일사이즈*/
+  }
+  html body header .header_name {
+    font-size: 1.1rem;
+  }
+  html body header .header_menu {
+    font-size: 1.1rem;
+  }
+  html body header #menu {
+    margin-left: 2vw;
+  }
+  html body footer {
+    font-size: 0.75rem;
+    margin: 0 -2.5vw 0 -2.5vw;
+    padding-top: 2.8vh;
+    padding-left: 1rem;
+  }
+  html body footer .footer_box {
+    margin-bottom: 0;
+  }
+  html body footer .footer_box .footer_left {
+    width: 40vw;
+    margin-right: 5vw;
+  }
+}
