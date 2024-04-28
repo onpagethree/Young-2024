@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./00_codeyoung_default.css">
+<link rel="stylesheet" href="./00_codeyoung_body.css">
+<link rel="stylesheet" href="https://use.typekit.net/vgs1vqh.css">
+<!-- 갤러리 css -->
+<link rel="stylesheet" href="./gallery.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Young</title>
+</head>
+
+<style>
+  /* 바디 내용 시작 */
+  .container {
+    height: 87vh;
+    display: flex;
+    margin-bottom: 100px;
+  }
+
+  .column-left {
+    width: 75%;
+    overflow: auto;
+  }
+
+  .column-left img {
+    /*더블이미지에 필수*/
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2vh;
+  }
+
+  /*더블 이미지*/
+  .img-double {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0vw 12vw 0vw 12vw;
+  }
+
+  .img-double-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-double-box>img {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+  }
+
+  /* 유튜브 링크 */
+  .youtube {
+    position: relative;
+    padding-bottom: 56.26%;
+    height: 0;
+    overflow-y: hidden;
+    margin-bottom: 2vh;
+  }
+
+  .youtube iframe,
+  .youtube object,
+  .youtube embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    word-wrap: 100%;
+    height: 100%;
+  }
+
+  .mid_text {
+    font-size: 0.7vw;
+    line-height: 150%;
+    color: rgb(136, 136, 136);
+    text-align: center;
+    margin: 6vh 0 6vh 0;
+  }
+
+  .colaborated {
+    font-size: 0.7vw;
+    line-height: 150%;
+    color: rgb(136, 136, 136);
+    text-align: center;
+
+    margin: 6vh 0 6vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #lastimg {
+    width: 20vw;
+    margin-top: 2vh;
+  }
+
+
+
+  /* 우측 Column 우측 Column WEB 웹사이즈 */
+  .column-right {
+    width: 25vw;
+    padding: 0 0 0 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .full-text {
+    flex: 1;
+  }
+
+  .title {
+
+    font-size: 1.4vw;
+    letter-spacing: -0.02em;
+    line-height: 135%;
+    margin-bottom: 1.35vw;
+  }
+
+  .caption {
+    font-weight: 400;
+    font-size: 0.85vw;
+    letter-spacing: 98%;
+    line-height: 145%;
+  }
+
+  .page {
+    margin-top: 3vh;
+
+    font-weight: 400;
+    font-size: 0.85vw;
+    letter-spacing: 98%;
+    line-height: 150%;
+    color: #00000065;
+  }
+
+  /* 우측 하단  WEB 웹사이즈 */
+  .right-summary-mobile {
+    display: none;
+  }
+
+  .right-summary-web {
+    font-size: 0.7vw;
+    line-height: 145%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #00000050;
+    padding-bottom: 0.25vw;
+    margin-top: 0.25vw;
+  }
+
+  .summary:last-child {
+    border-bottom: 0px;
+  }
+
+  .summary1 {
+    width: 28%;
+  }
+
+  .summary2 {
+    flex: 1;
+  }
+
+
+
+  @media only screen and (max-width: 700px) {
+
+    /* container  모바일사이즈 */
+    .container {
+      margin: 0;
+      height: 100%;
+      flex-direction: column-reverse;
+    }
+
+    .column-left {
+      width: 100%;
+      height: auto;
+      overflow: auto;
+    }
+
+    .column-left>img {
+      margin-bottom: 1vh;
+    }
+
+    .column-left>:last-child {
+      margin-bottom: 0;
+    }
+
+    .youtube {
+      margin-bottom: 2vh;
+    }
+
+    .mid_text {
+      font-size: 3vw;
+      line-height: 145%;
+      color: rgb(136, 136, 136);
+      text-align: center;
+      margin: 5vh 0 5vh 0;
+    }
+
+    .colaborated {
+      font-size: 3vw;
+      line-height: 145%;
+      color: rgb(136, 136, 136);
+      text-align: center;
+      margin: 5vh 0 5vh 0;
+    }
+
+    #lastimg {
+      width: 50vw;
+    }
+
+    /* coloumn-right  모바일사이즈 */
+    .column-right {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: 6.2vw;
+      line-height: 130%;
+      margin-bottom: 5vw;
+    }
+
+    .caption {
+      font-size: 3.2vw;
+    }
+
+    .full-text {
+      margin-bottom: 6vh;
+    }
+
+    .page {
+      font-size: 3.2vw;
+      line-height: 145%;
+    }
+
+    .page>a {
+      font-size: 3.2vw;
+      line-height: 145%;
+    }
+
+    /* SUMMARY mobile */
+    .right-summary-web {
+      display: none;
+    }
+
+    .right-summary-mobile {
+      display: block;
+      margin-top: 6vh;
+      margin-bottom: 12vh;
+      font-size: 3vw;
+    }
+
+    .summary {
+      padding-bottom: 1vw;
+      margin-top: 1vw;
+    }
+
+    .summary1 {
+      width: 22%;
+    }
+
+
+  }
+</style>
+
+<body>
+  <header>
+    <a class="header_name" href="./work-all.html">
+      Younghyun Song
+    </a>
+
+    <div class="header_menu">
+      <a id="menu" href="./work-all.html">Work</a>
+      <a id="menu" href="./05_about.html">About</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="column-left">
+      <div class="youtube"> <iframe width="100%" height="100%"
+          src="https://www.youtube.com/embed/r8t2RVlpdG0?modestbranding=1&autoplay=1&mute=1&version=3&loop=1&playlist=r8t2RVlpdG0"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe></div>
+
+      <div class="mid_text">
+        <span id="underline"></span>
+        영상 오류가 발생했을 경우 새로고침 하시면 재생할 수 있습니다.
+      </div>
+
+      <img src="./17_AP/03_live commerce/live commerce 2.gif" alt="">
+      <img src="./17_AP/03_live commerce/live commerce 3.png" alt="">
+      <img src="./17_AP/03_live commerce/live commerce 4.png" alt="">
+
+      <div class="colaborated">
+        Collaborated with
+        <img id="lastimg" src="./17_AP/03_live commerce/live commerce 5.png" alt="">
+        아모레퍼시픽 럭셔리브랜드 Division에 소속되어 <br>
+        Hera, 설화수, AP 등의 브랜드 컨텐츠 제작에 기획 및 디자인으로 참여했습니다.
+      </div>
+    </div>
+
+    <div class="column-right">
+      <div class="full-text">
+        <div class="title">
+          Live Commerce
+        </div>
+        <div class="caption">
+          네이버, 카카오 등과 진행했던 라이브 커머스의 화면 디자인,
+          촬영 보조 및 영상 편집을 담당했습니다.
+        </div>
+        <div class="page" id="underline"><a href="./20_0_ap_works for AP_list.html"> Related Works for AP</a>
+        </div>
+      </div>
+
+      <div class="right-summary-web">
+        <div class="summary">
+          <div class="summary1">Project</div>
+          <div class="summary2">Live Commervce</div>
+        </div>
+        <div class="summary">
+          <div class="summary1">Field</div>
+          <div class="summary2">Graphic</div>
+        </div>
+        <div class="summary">
+          <div class="summary1">Date</div>
+          <div class="summary2">2020. 02—2021.07</div>
+        </div>
+        <div class="summary">
+          <div class="summary1">Team</div>
+          <div class="summary2">Edit, Design : Younghyun Song <br>
+            VMD 30%, Filming 30%,<br>
+            Worked with BM, Sales Team
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="right-summary-mobile">
+    <div class="summary">
+      <div class="summary1">Project</div>
+      <div class="summary2">Live Commervce</div>
+    </div>
+    <div class="summary">
+      <div class="summary1">Field</div>
+      <div class="summary2">Graphic</div>
+    </div>
+    <div class="summary">
+      <div class="summary1">Date</div>
+      <div class="summary2">2020. 02—2021. 07</div>
+    </div>
+    <div class="summary">
+      <div class="summary1">Team</div>
+      <div class="summary2">Edit, Design : Younghyun Song <br>
+        VMD 30%, Filming 30%,<br>
+        Worked with BM, Sales Team
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer_row">
+      <div class="footer_c1">
+        <a class="header_name" href="./index-all.html"> Younghyun <br> Song</a>
+      </div>
+      <div class="footer_c2">
+        in Seoul<br>
+        Graphic Designer <br>
+        Brand Thinker <br>
+      </div>
+      <div class="footer_c3">
+        Contact <br>
+        <span id="underline">
+          <a href="mailto:" yhyun4156@gmail.com>yhyun4156@gmail.com</a><br>
+          <a href="https://www.instagram.com/ma_frame/" target="_blank">instagram ↗</a>
+        </span>
+      </div>
+      <div class="footer_c4">
+        <a id="bigger" href="#">↑</a>
+      </div>
+    </div>
+    <div>
+      © Younghyun Song. 2022 </div>
+  </footer>
+
+  <script>
+  </script>
+</body>
+
+</html>

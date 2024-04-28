@@ -5,7 +5,7 @@
 }
 
 .slide-gallery {
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
 }
 
 .gallery-cell {
@@ -33,13 +33,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 2vh;
+  margin-bottom: .3vh;
 }
 
 .gallery-box {
   /* 모달 갤러리 썸네일 사이즈 */
   width: 46.75vw;
-  margin-bottom: -2vh;
+  margin-bottom: -.3vh;
 
   display: flex;
   justify-content: center;

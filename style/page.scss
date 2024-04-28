@@ -106,7 +106,7 @@ body {
       max-width: 100%;
       height: auto;
 
-      margin-bottom: $vh-space;
+      margin-bottom: 3vh;
     }
 
     /*세로이미지*/
@@ -115,7 +115,7 @@ body {
       justify-content: center;
       align-items: center;
 
-      margin-bottom: $vh-space;
+      margin-bottom: 3vh;
     }
 
     .img-vertical>img {
@@ -131,7 +131,7 @@ body {
       height: 0;
       overflow-y: hidden;
 
-      margin-bottom: $vh-space;
+      margin-bottom: 3vh;
 
       iframe,
       object,

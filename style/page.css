@@ -77,13 +77,13 @@ body .container .mid_text_double .text_right {
 body .container img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
 }
 body .container .img-vertical {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
 }
 body .container .img-vertical > img {
   width: 50%;
@@ -94,7 +94,7 @@ body .container .youtube {
   padding-bottom: 56.25%;
   height: 0;
   overflow-y: hidden;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
 }
 body .container .youtube iframe,
 body .container .youtube object,
