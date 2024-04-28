@@ -30,30 +30,30 @@ body .container .project-info .info_left .title {
 body .container .project-info .info_right {
   flex: 1;
   padding-right: 5vw;
+  /* 연결 페이지가 있는 경우 */
   /* 크레딧 */
 }
 body .container .project-info .info_right .caption {
   font-size: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+}
+body .container .project-info .info_right .info-page {
+  color: gray;
+  margin-bottom: 1.5em;
+  font-size: 1.1rem;
+  line-height: 1.4em;
 }
 body .container .project-info .info_right .credit_box {
   display: flex;
   border-top: 1px solid black;
   margin-top: 0.4em;
   padding-top: 0.4em;
-  /* 연결 페이지가 있는 경우 */
 }
 body .container .project-info .info_right .credit_box .credit_1 {
   width: 30%;
 }
 body .container .project-info .info_right .credit_box .credit_2 {
   flex: 1;
-}
-body .container .project-info .info_right .credit_box .info-page {
-  color: gray;
-  margin-right: 5vw;
-  margin-bottom: 3.3vw;
-  font-size: 1.1em;
 }
 body .container .mid_text {
   color: black;
@@ -135,16 +135,15 @@ body .container .youtube embed {
   body .container .project-info .info_right .caption {
     margin-bottom: 3vh;
   }
+  body .container .project-info .info_right .info-page {
+    margin-bottom: 3vh;
+  }
   body .container .project-info .info_right .credit_box {
     font-size: 0.94em;
     line-height: 1.2em;
   }
   body .container .project-info .info_right .credit_1 {
     width: 24%;
-  }
-  body .container .project-info .info_right .info-page {
-    margin-left: 12vw;
-    margin-bottom: 5vw;
   }
   body .container .mid_text {
     padding: 3.5vw 2.5vw 6vw 2.5vw;

@@ -41,7 +41,15 @@ body {
 
         .caption {
           font-size: 1em;
-          margin-bottom: 2em;
+          margin-bottom: 1.5em;
+        }
+
+        /* 연결 페이지가 있는 경우 */
+        .info-page {
+          color: gray;
+          margin-bottom: 1.5em;
+          font-size: 1.1rem;
+          line-height: $lh;
         }
 
         /* 크레딧 */
@@ -58,15 +66,6 @@ body {
 
           .credit_2 {
             flex: 1;
-          }
-
-          /* 연결 페이지가 있는 경우 */
-          .info-page {
-            color: gray;
-            margin-right: 5vw;
-            margin-bottom: 3.3vw;
-
-            font-size: 1.1em;
           }
         }
       }
@@ -178,6 +177,10 @@ body {
             margin-bottom: calc($vh-space * 0.75);
           }
 
+          .info-page {
+            margin-bottom: calc($vh-space * 0.75);
+          }
+
           /* 프로젝트 크레딧 모바일*/
           .credit_box {
             font-size: .94em;
@@ -187,12 +190,8 @@ body {
           .credit_1 {
             width: 24%;
           }
-
-          .info-page {
-            margin-left: 12vw;
-            margin-bottom: 5vw;
-          }
         }
+
       }
 
       /*IMG IMG 중간 글 모바일*/
