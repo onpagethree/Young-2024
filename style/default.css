@@ -97,7 +97,7 @@ body header #menu:hover {
   transition: all 0.2s ease-in;
 }
 body footer {
-  background-color: var(--lightgray);
+  background-color: rgb(245, 245, 245);
   margin: 0 -2.5vw 0 -2.5vw;
   padding: 0 2.5vw 0 2.5vw;
   padding-top: 4vh;
