@@ -12,12 +12,12 @@
 /* 한글 폰트 */
 @font-face {
   font-family: "gothica1";
-  src: url(/00_source_default/Gothica1/GothicA1-Medium.ttf);
+  src: url(/source_default/Gothica1/GothicA1-Medium.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: "gothica1";
-  src: url(/00_source_default/Gothica1/GothicA1-SemiBold.ttf);
+  src: url(/source_default/Gothica1/GothicA1-SemiBold.ttf);
   font-weight: 600;
 }
 @font-face {
