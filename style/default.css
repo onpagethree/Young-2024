@@ -28,7 +28,7 @@
 /* 영문 폰트 */
 @font-face {
   font-family: "gravur";
-  src: url(/source_default/Gravur-Condensed-Regular.ttf);
+  src: url("./source_default/Gravur-Condensed-Regular.ttf");
   font-weight: 400;
 }
 * {

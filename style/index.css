@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 #underline {
   text-decoration: underline;
 }
@@ -26,6 +27,7 @@
     font-size: 2.6rem;
     line-height: 1.25em;
   }
+
   footer {
     position: fixed;
     bottom: 0;
