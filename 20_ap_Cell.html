@@ -26,6 +26,53 @@
 
   <link rel="stylesheet" href="./style/default.css">
   <link rel="stylesheet" href="./style/page.css">
+
+  <style>
+    .youtube iframe {
+      pointer-events: none;
+    }
+
+    .youtube:hover iframe {
+      pointer-events: none;
+    }
+
+    .youtube iframe::-webkit-media-controls {
+      display: none !important;
+    }
+
+    .youtube iframe::-webkit-media-controls-enclosure {
+      display: none !important;
+      justify-content: flex-end;
+    }
+
+    .youtube iframe::-webkit-media-controls-timeline {
+      display: none !important;
+    }
+  </style>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    function onYouTubeIframeAPIReady() {
+      var player;
+      player = new YT.Player('player', {
+        videoId: 'hBPuKjSW4AQ',
+        playerVars: {
+          'autoplay': 1,
+          'mute': 1,
+          'loop': 1,
+          'playlist': 'hBPuKjSW4AQ',
+          'controls': 0,
+          'modestbranding': 1
+        },
+        events: {
+          'onReady': function (event) {
+            event.target.playVideo();
+          }
+        }
+      });
+    }
+  </script>
+
 </head>
 
 <body>
@@ -43,7 +90,7 @@
   <div class="container">
     <div class="youtube">
       <iframe width="100%" height="100%"
-        src="https://www.youtube.com/embed/hBPuKjSW4AQ?modestbranding=1&autoplay=1&mute=1&version=3&loop=1&playlist=hBPuKjSW4AQ"
+        src="https://www.youtube.com/embed/hBPuKjSW4AQ?modestbranding=1&autoplay=1&mute=1&version=3&loop=1&playlist=hBPuKjSW4AQ&controls=0"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
@@ -117,7 +164,6 @@
   </footer>
 
   <script>
-    // 팝업 갤러리
     $(document).on('click', '[data-toggle="lightbox"]', function (event) {
       event.preventDefault();
       $(this).ekkoLightbox();
