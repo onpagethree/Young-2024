@@ -104,10 +104,15 @@ body {
     //  HEADER 헤더 제목
     .header_name {
       font-size: 1.5rem;
+
+      position: fixed;
+      z-index: 1000;
+      mix-blend-mode: color-burn;
+      /* Multiply 효과 적용 */
     }
 
     .header_name:hover {
-      color: gray;
+      color: var(--blue);
     }
 
     .header_menu {

@@ -79,9 +79,13 @@ body header {
 }
 body header .header_name {
   font-size: 1.5rem;
+  position: fixed;
+  z-index: 1000;
+  mix-blend-mode: color-burn;
+  /* Multiply 효과 적용 */
 }
 body header .header_name:hover {
-  color: gray;
+  color: var(--blue);
 }
 body header .header_menu {
   font-size: 1.5rem;
