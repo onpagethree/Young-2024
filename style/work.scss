@@ -37,15 +37,19 @@ body {
   /* 바디 내용 시작 web web 웹 */
   .container {
     display: flex;
-
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     .box {
       letter-spacing: -0.02em;
 
       width: 23.3vw;
       height: calc(23.3vw * 1.15);
+
+      margin-right: .35vw;
+      /* 각 요소들 사이의 간격을 설정 */
+      margin-bottom: .5vw;
+      /* 아래쪽 간격 유지 */
 
       display: flex;
       flex-direction: column;

@@ -81,7 +81,7 @@ body header .header_name {
   font-size: 1.5rem;
   position: fixed;
   z-index: 1000;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: overlay;
   /* Multiply 효과 적용 */
 }
 body header .header_name:hover {
