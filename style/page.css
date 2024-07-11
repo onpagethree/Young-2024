@@ -125,7 +125,7 @@ body .container .youtube embed {
     flex-direction: column;
   }
   body .container .project-info .info_left {
-    width: 80vw;
+    width: 90vw;
   }
   body .container .project-info .info_left .title {
     font-size: 1.35rem;
