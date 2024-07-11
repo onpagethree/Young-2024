@@ -5,9 +5,8 @@
   --lightgray: rgb(220, 220, 220);
 }
 
-
-$default-f: 1.5vw;
-$mobile-f: 5.4vw;
+$default-f: 1.3vw;
+$mobile-f: 5vw;
 $lh: 1.4em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
@@ -16,7 +15,6 @@ $vh-space: 4vh;
 #underline {
   text-decoration: underline;
 }
-
 
 /* 한글 폰트 */
 @font-face {
@@ -43,8 +41,6 @@ $vh-space: 4vh;
   src: url("../source_default/Gravur-Condensed-Regular.ttf");
   font-weight: 400;
 }
-
-
 
 // 기본 설정
 
@@ -84,12 +80,10 @@ img {
   height: auto;
 }
 
-
 html {
   font-size: $default-f;
   line-height: $lh;
 }
-
 
 body {
   padding: $padding;
@@ -118,7 +112,7 @@ body {
     .header_menu {
       font-size: 1.5rem;
       position: absolute;
-      right: .25rem;
+      right: 0.25rem;
     }
 
     #menu {
@@ -137,6 +131,8 @@ body {
   footer {
     background-color: rgb(245, 245, 245);
     margin: 0 -2.5vw 0 -2.5vw;
+    width: 100%;
+
     padding: $padding;
     padding-top: $vh-space;
     padding-bottom: $vh-space;
@@ -163,10 +159,6 @@ body {
   }
 }
 
-
-
-
-
 /* 모바일사이즈  모바일사이즈  모바일사이즈 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
   html {
@@ -176,10 +168,11 @@ body {
       padding: $padding;
 
       header {
-        margin: 1.5vh 0 1.5vh 0;
+        margin: 2vh 0 1.5vh 0;
 
         .header_name {
           font-size: 1.1rem;
+          position: relative;
         }
 
         /*HEADER 헤더 모바일사이즈*/
@@ -192,14 +185,13 @@ body {
         }
       }
 
-
       /* FOOTER 하단바 모바일사이즈 */
       footer {
-        font-size: .75rem;
+        font-size: 0.55rem;
 
         margin: 0 -2.5vw 0 -2.5vw;
         padding-top: calc($vh-space * 0.7);
-        padding-left: 1rem;
+        padding-left: 1em;
 
         .footer_box {
           margin-bottom: 0;

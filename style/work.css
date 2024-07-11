@@ -34,7 +34,7 @@ body .container .box {
   height: 26.795vw;
   margin-right: 0.35vw;
   /* 각 요소들 사이의 간격을 설정 */
-  margin-bottom: 0.5vw;
+  margin-bottom: -4vh;
   /* 아래쪽 간격 유지 */
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@ body .container .box {
   text-align: center;
 }
 body .container .box .thumbnail-box {
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.5em;
   width: 23.3vw;
   height: 16vw;
   overflow: hidden;
@@ -56,7 +56,8 @@ body .container .box .thumbnail-box > img {
   height: 100%;
   overflow: hidden;
   /* 이미지 정 사이즈 */
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body .container .box .thumbnail-box .thumbnail:hover {
   transform: scale(1.03);
@@ -67,23 +68,28 @@ body .container .box .thumbnail-box .thumbnail:hover {
 /* 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
   body {
+    font-size: 0.75rem;
     /* 바디  바디  바디 mobile */
   }
   body .category {
-    margin-top: 10vh;
+    width: 85vw;
+    margin-top: 1.9rem;
     line-height: 1.5em;
+    font-size: 0.85rem;
   }
   body .category > a {
-    margin-right: 0.6em;
+    margin-right: 0.8em;
   }
   body .container {
     display: flex;
     flex-direction: column;
+    margin-top: -0.5em;
   }
   body .container .box {
-    margin-bottom: 4.8vh;
     width: 100%;
     height: 42vh;
+    margin-bottom: 0.1em;
+    /* 아래쪽 간격 유지 */
   }
   body .container .box .thumbnail-box {
     width: 100%;

@@ -50,6 +50,11 @@ a:visited {
   color: inherit;
 }
 
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(60, 145, 255);
+}
+
 ::selection {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(60, 145, 255);
@@ -63,7 +68,7 @@ img {
 }
 
 html {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   line-height: 1.4em;
 }
 
@@ -103,6 +108,7 @@ body header #menu:hover {
 body footer {
   background-color: rgb(245, 245, 245);
   margin: 0 -2.5vw 0 -2.5vw;
+  width: 100%;
   padding: 0 2.5vw 0 2.5vw;
   padding-top: 4vh;
   padding-bottom: 4vh;
@@ -127,18 +133,19 @@ body footer .footer_box .footer_right {
 /* 모바일사이즈  모바일사이즈  모바일사이즈 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
   html {
-    font-size: 5.4vw;
+    font-size: 5vw;
   }
   html body {
     padding: 0 2.5vw 0 2.5vw;
     /* FOOTER 하단바 모바일사이즈 */
   }
   html body header {
-    margin: 1.5vh 0 1.5vh 0;
+    margin: 2vh 0 1.5vh 0;
     /*HEADER 헤더 모바일사이즈*/
   }
   html body header .header_name {
     font-size: 1.1rem;
+    position: relative;
   }
   html body header .header_menu {
     font-size: 1.1rem;
@@ -147,10 +154,10 @@ body footer .footer_box .footer_right {
     margin-left: 2vw;
   }
   html body footer {
-    font-size: 0.75rem;
+    font-size: 0.55rem;
     margin: 0 -2.5vw 0 -2.5vw;
     padding-top: 2.8vh;
-    padding-left: 1rem;
+    padding-left: 1em;
   }
   html body footer .footer_box {
     margin-bottom: 0;

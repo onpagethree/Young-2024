@@ -1,5 +1,5 @@
-$default-f: 1.5vw;
-$mobile-f: 5.4vw;
+$default-f: 1.3vw;
+$mobile-f: 5vw;
 $lh: 1.4em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
@@ -8,7 +8,6 @@ $vh-space: 4vh;
 #underline {
   text-decoration: underline;
 }
-
 
 /* 바디 내용 시작 */
 
@@ -71,14 +70,12 @@ body {
       }
     }
 
-
     /*프로젝트 중간글*/
     .mid_text {
       color: black;
       text-align: center;
       padding: 3.5vh 0 6vh 0;
     }
-
 
     /* 프로젝트 중간글 더블더블 */
     .mid_text_double {
@@ -117,11 +114,10 @@ body {
       margin-bottom: 3vh;
     }
 
-    .img-vertical>img {
+    .img-vertical > img {
       width: 50%;
       margin: 0;
     }
-
 
     /* 유튜브 링크 */
     .youtube {
@@ -144,9 +140,6 @@ body {
     }
   }
 }
-
-
-
 
 /* 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
@@ -183,15 +176,14 @@ body {
 
           /* 프로젝트 크레딧 모바일*/
           .credit_box {
-            font-size: .94em;
-            line-height: 1.2em
+            font-size: 0.94em;
+            line-height: 1.2em;
           }
 
           .credit_1 {
             width: 24%;
           }
         }
-
       }
 
       /*IMG IMG 중간 글 모바일*/
@@ -201,8 +193,8 @@ body {
 
       /* 프로젝트 중간글 더블더블 */
       .mid_text_double {
-        margin-top: calc($vh-space * .75);
-        margin-bottom: calc($vh-space * .75);
+        margin-top: calc($vh-space * 0.75);
+        margin-bottom: calc($vh-space * 0.75);
 
         flex-direction: column;
 

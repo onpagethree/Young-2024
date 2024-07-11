@@ -1,5 +1,5 @@
-$default-f: 1.5vw;
-$mobile-f: 5.4vw;
+$default-f: 1.3vw;
+$mobile-f: 5vw;
 $lh: 1.4em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
@@ -8,7 +8,6 @@ $vh-space: 4vh;
 #underline {
   text-decoration: underline;
 }
-
 
 // -----Index CSS
 
@@ -20,9 +19,8 @@ $vh-space: 4vh;
   color: var(--lightgray);
   display: inline-block;
 
-  font-size: 8rem;
+  font-size: 6rem;
   line-height: 1.15em;
-
 
   width: 100%;
   margin-bottom: calc($vh-space * 2);
@@ -33,13 +31,9 @@ $vh-space: 4vh;
   /* 포커스 효과 없애기 */
 }
 
-
-
-
 @media only screen and (max-width: 700px) {
-
   #textInput {
-    margin-top: 1.25em;
+    margin-top: 2rem;
 
     font-size: 2.6rem;
     line-height: 1.25em;
@@ -49,5 +43,4 @@ $vh-space: 4vh;
     position: fixed;
     bottom: 0;
   }
-
 }

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 #underline {
   text-decoration: underline;
 }
@@ -11,7 +10,7 @@
 #textInput {
   color: var(--lightgray);
   display: inline-block;
-  font-size: 8rem;
+  font-size: 6rem;
   line-height: 1.15em;
   width: 100%;
   margin-bottom: 8vh;
@@ -23,11 +22,10 @@
 
 @media only screen and (max-width: 700px) {
   #textInput {
-    margin-top: 1.25em;
+    margin-top: 2rem;
     font-size: 2.6rem;
     line-height: 1.25em;
   }
-
   footer {
     position: fixed;
     bottom: 0;

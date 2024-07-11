@@ -1,5 +1,5 @@
-$default-f: 1.5vw;
-$mobile-f: 5.4vw;
+$default-f: 1.3vw;
+$mobile-f: 5vw;
 $lh: 1.4em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
@@ -8,7 +8,6 @@ $vh-space: 4vh;
 #underline {
   text-decoration: underline;
 }
-
 
 /* WORK 인덱스 */
 body {
@@ -23,16 +22,15 @@ body {
       color: black;
     }
 
-    >a {
+    > a {
       margin-right: 1.25em;
     }
 
-    >a:hover {
+    > a:hover {
       color: gray;
       transition: all 0.2s linear;
     }
   }
-
 
   /* 바디 내용 시작 web web 웹 */
   .container {
@@ -46,9 +44,9 @@ body {
       width: 23.3vw;
       height: calc(23.3vw * 1.15);
 
-      margin-right: .35vw;
+      margin-right: 0.35vw;
       /* 각 요소들 사이의 간격을 설정 */
-      margin-bottom: .5vw;
+      margin-bottom: -$vh-space;
       /* 아래쪽 간격 유지 */
 
       display: flex;
@@ -59,9 +57,8 @@ body {
       align-items: center;
       text-align: center;
 
-
       .thumbnail-box {
-        margin-bottom: .85rem;
+        margin-bottom: 0.5em;
 
         width: 23.3vw;
         height: 16vw;
@@ -71,12 +68,12 @@ body {
         justify-content: center;
         align-items: center;
 
-        >img {
+        > img {
           width: 100%;
           height: 100%;
           overflow: hidden;
           /* 이미지 정 사이즈 */
-          object-fit: cover
+          object-fit: cover;
         }
 
         .thumbnail:hover {
@@ -89,21 +86,20 @@ body {
   }
 }
 
-
-
-
 /* 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
-
   body {
+    font-size: 0.75rem;
 
     .category {
-      margin-top: calc($vh-space * 2.5);
-
+      width: 85vw;
+      margin-top: 1.9rem;
       line-height: 1.5em;
 
-      >a {
-        margin-right: .6em;
+      font-size: 0.85rem;
+
+      > a {
+        margin-right: 0.8em;
       }
     }
 
@@ -111,12 +107,14 @@ body {
     .container {
       display: flex;
       flex-direction: column;
+      margin-top: -0.5em;
 
       .box {
-        margin-bottom: calc($vh-space * 1.2);
-
         width: 100%;
         height: 42vh;
+
+        margin-bottom: 0.1em;
+        /* 아래쪽 간격 유지 */
 
         .thumbnail-box {
           width: 100%;
@@ -125,8 +123,4 @@ body {
       }
     }
   }
-
-
-
-
 }
