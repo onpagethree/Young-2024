@@ -1,4 +1,4 @@
-$default-f: 1.3vw;
+$default-f: 1.1vw;
 $mobile-f: 3.9vw;
 $lh: 1.45em;
 // line height
@@ -12,7 +12,7 @@ $vh-space: 4vh;
 /* 바디 내용 시작 */
 body {
   .container {
-    margin-top: calc($vh-space * 2);
+    margin-top: calc($vh-space * 2.5);
     margin-bottom: calc($vh-space * 2);
 
     /* 프로젝트 설명 */
@@ -28,7 +28,7 @@ body {
 
         .title {
           font-size: 2.25rem;
-          line-height: 1.25em;
+          line-height: $titlelh;
         }
       }
 
@@ -144,7 +144,8 @@ body {
   }
 }
 
-/* 모바일사이즈  모바일사이즈  모바일사이즈 */
+// 모바일 사이즈 모바일 사이즈 모바일 사이즈
+
 @media only screen and (max-width: 700px) {
   body {
     .container {

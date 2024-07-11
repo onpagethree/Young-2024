@@ -5,9 +5,10 @@
   --lightgray: rgb(220, 220, 220);
 }
 
-$default-f: 1.3vw;
+$default-f: 1.1vw;
 $mobile-f: 3.9vw;
 $lh: 1.4em;
+$titlelh: 1.25em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
 $vh-space: 4vh;
@@ -42,6 +43,9 @@ $vh-space: 4vh;
   font-weight: 400;
 }
 
+/* 영문 폰트 "Asap" */
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+
 // 기본 설정
 
 * {
@@ -54,7 +58,7 @@ $vh-space: 4vh;
 
   position: relative;
 
-  font-family: "gravur", "gothica1", sans-serif;
+  font-family: "Asap", "gothica1", sans-serif;
   font-weight: 400;
   word-break: keep-all;
 }
@@ -90,7 +94,7 @@ body {
 
   // HEADER 헤더
   header {
-    margin: 3vh 0 4vh 0;
+    margin: 3vh 0 7em 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

@@ -1,0 +1,69 @@
+$default-f: 1.1vw;
+$mobile-f: 3.9vw;
+
+// line height
+$lh: 1.4em;
+$titlelh: 1.25em;
+
+$padding: 0 2.5vw 0 2.5vw;
+$vh-space: 4vh;
+
+body {
+  .container {
+    margin-top: calc($vh-space * 2.5);
+    margin-bottom: calc($vh-space * 2);
+
+    .AboutInfo {
+      margin-bottom: 2rem;
+
+      .title {
+        font-size: 2.25rem;
+        line-height: $titlelh;
+        margin-bottom: 0.7rem;
+      }
+
+      .contact {
+        a {
+          color: rgb(140, 140, 140);
+        }
+      }
+    }
+  }
+
+  .list {
+    display: flex;
+    border-bottom: 0.75px solid black;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+
+    // &:last-child {
+    //   border-bottom: none;
+    // }
+
+    #now {
+      color: red;
+      top: 0.12em;
+    }
+
+    .li_1 {
+      width: 22vw;
+    }
+
+    .li_2 {
+      flex: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    .container {
+      .AboutInfo {
+        .title {
+          font-size: 1.35rem;
+          margin-bottom: calc($vh-space * 0.75);
+        }
+      }
+    }
+  }
+}

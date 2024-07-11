@@ -1,6 +1,7 @@
-$default-f: 1.3vw;
+$default-f: 1.1vw;
 $mobile-f: 3.9vw;
 $lh: 1.4em;
+$titlelh: 1.25em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
 $vh-space: 4vh;
@@ -12,11 +13,10 @@ $vh-space: 4vh;
 /* WORK 인덱스 */
 body {
   .category {
+    margin-bottom: $vh-space;
+
     font-size: 1rem;
     color: var(--lightgray);
-
-    margin-top: calc($vh-space * 2.5);
-    margin-bottom: $vh-space;
 
     #selected {
       color: black;

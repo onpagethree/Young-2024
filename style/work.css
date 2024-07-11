@@ -8,10 +8,9 @@ body {
   /* 바디 내용 시작 web web 웹 */
 }
 body .category {
+  margin-bottom: 4vh;
   font-size: 1rem;
   color: var(--lightgray);
-  margin-top: 10vh;
-  margin-bottom: 4vh;
 }
 body .category #selected {
   color: black;
