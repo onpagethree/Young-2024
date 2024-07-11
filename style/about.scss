@@ -10,11 +10,10 @@ $vh-space: 4vh;
 
 body {
   .container {
-    margin-top: calc($vh-space * 2.5);
     margin-bottom: calc($vh-space * 2);
 
     .AboutInfo {
-      margin-bottom: 2rem;
+      margin-bottom: 7rem;
 
       .title {
         font-size: 2.25rem;
@@ -33,13 +32,9 @@ body {
   .list {
     display: flex;
     border-bottom: 0.75px solid black;
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-
-    // &:last-child {
+    padding: 0.6em 0; // &:last-child {
     //   border-bottom: none;
     // }
-
     #now {
       color: red;
       top: 0.12em;
@@ -59,9 +54,10 @@ body {
   body {
     .container {
       .AboutInfo {
+        margin-bottom: 2.5rem;
         .title {
           font-size: 1.35rem;
-          margin-bottom: calc($vh-space * 0.75);
+          margin-bottom: 0.9rem;
         }
       }
     }

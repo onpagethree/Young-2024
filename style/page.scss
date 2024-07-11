@@ -1,6 +1,7 @@
 $default-f: 1.1vw;
 $mobile-f: 3.9vw;
 $lh: 1.45em;
+$titlelh: 1.25em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
 $vh-space: 4vh;
@@ -12,8 +13,7 @@ $vh-space: 4vh;
 /* 바디 내용 시작 */
 body {
   .container {
-    margin-top: calc($vh-space * 2.5);
-    margin-bottom: calc($vh-space * 2);
+    margin-bottom: 7rem;
 
     /* 프로젝트 설명 */
     .project-info {

@@ -94,7 +94,7 @@ body {
 
   // HEADER 헤더
   header {
-    margin: 3vh 0 7em 0;
+    margin: 3vh 0 7rem 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -173,7 +173,7 @@ body {
       padding: $padding;
 
       header {
-        margin: 2vh 0 1.5vh 0;
+        margin: 2vh 0 4rem 0;
 
         .header_name {
           font-size: 1.2rem;
@@ -186,7 +186,7 @@ body {
         }
 
         #menu {
-          margin-left: 2vw;
+          margin-left: 0.7em;
         }
       }
 

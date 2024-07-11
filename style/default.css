@@ -79,7 +79,7 @@ body {
   /* FOOTER 하단바 웹사이즈 */
 }
 body header {
-  margin: 3vh 0 7em 0;
+  margin: 3vh 0 7rem 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -143,7 +143,7 @@ body footer .footer_box .footer_right {
     /* FOOTER 하단바 모바일사이즈 */
   }
   html body header {
-    margin: 2vh 0 1.5vh 0;
+    margin: 2vh 0 4rem 0;
     /*HEADER 헤더 모바일사이즈*/
   }
   html body header .header_name {
@@ -154,7 +154,7 @@ body footer .footer_box .footer_right {
     font-size: 1.2rem;
   }
   html body header #menu {
-    margin-left: 2vw;
+    margin-left: 0.7em;
   }
   html body footer {
     font-size: 0.9rem;

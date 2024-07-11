@@ -1,9 +1,8 @@
 body .container {
-  margin-top: 10vh;
   margin-bottom: 8vh;
 }
 body .container .AboutInfo {
-  margin-bottom: 2rem;
+  margin-bottom: 7rem;
 }
 body .container .AboutInfo .title {
   font-size: 2.25rem;
@@ -16,8 +15,7 @@ body .container .AboutInfo .contact a {
 body .list {
   display: flex;
   border-bottom: 0.75px solid black;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  padding: 0.6em 0;
 }
 body .list #now {
   color: red;
@@ -31,8 +29,11 @@ body .list .li_2 {
 }
 
 @media only screen and (max-width: 700px) {
+  body .container .AboutInfo {
+    margin-bottom: 2.5rem;
+  }
   body .container .AboutInfo .title {
     font-size: 1.35rem;
-    margin-bottom: 3vh;
+    margin-bottom: 0.9rem;
   }
 }
