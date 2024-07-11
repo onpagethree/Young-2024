@@ -26,10 +26,10 @@
   src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
   font-weight: 800;
 }
-/* 영문 폰트 */
+/* 영문 폰트 "Mabry_pro" */
 @font-face {
-  font-family: "gravur";
-  src: url("../source_default/Gravur-Condensed-Regular.ttf");
+  font-family: "Mabry_pro";
+  src: url("../source_default/Mabry_pro/Mabry-Pro-Medium.ttf");
   font-weight: 400;
 }
 /* 영문 폰트 "Asap" */
