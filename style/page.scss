@@ -1,8 +1,8 @@
-$default-f: 1.1vw;
+$default-f: 0.9vw;
 $mobile-f: 3.9vw;
-$lh: 1.45em;
-$titlelh: 1.25em;
 // line height
+$lh: 1.4em;
+$titlelh: 1.25em;
 $padding: 0 2.5vw 0 2.5vw;
 $vh-space: 4vh;
 
@@ -27,7 +27,7 @@ body {
         padding-right: 5vw;
 
         .title {
-          font-size: 2.25rem;
+          font-size: 3rem;
           line-height: $titlelh;
         }
       }
@@ -162,7 +162,7 @@ body {
           width: 90vw;
 
           .title {
-            font-size: 1.35rem;
+            font-size: 1.75rem;
             margin-bottom: calc($vh-space * 0.75);
           }
         }

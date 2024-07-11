@@ -1,16 +1,16 @@
 body .container {
-  margin-bottom: 8vh;
-}
-body .container .AboutInfo {
   margin-bottom: 7rem;
 }
+body .container .AboutInfo {
+  margin-bottom: 3em;
+}
 body .container .AboutInfo .title {
-  font-size: 2.25rem;
-  line-height: 1.25em;
-  margin-bottom: 0.7rem;
+  font-size: 3rem;
+  line-height: 1.3em;
+  margin-bottom: 0.5em;
 }
 body .container .AboutInfo .contact a {
-  color: rgb(140, 140, 140);
+  color: var(--lightgray);
 }
 body .list {
   display: flex;
@@ -25,6 +25,7 @@ body .list .li_1 {
   width: 22vw;
 }
 body .list .li_2 {
+  line-height: 1.5em;
   flex: 1;
 }
 
@@ -33,7 +34,7 @@ body .list .li_2 {
     margin-bottom: 2.5rem;
   }
   body .container .AboutInfo .title {
-    font-size: 1.35rem;
+    font-size: 1.75rem;
     margin-bottom: 0.9rem;
   }
 }

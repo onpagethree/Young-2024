@@ -1,29 +1,27 @@
-$default-f: 1.1vw;
+$default-f: 0.9vw;
 $mobile-f: 3.9vw;
-
 // line height
 $lh: 1.4em;
-$titlelh: 1.25em;
-
+$titlelh: 1.3em;
 $padding: 0 2.5vw 0 2.5vw;
 $vh-space: 4vh;
 
 body {
   .container {
-    margin-bottom: calc($vh-space * 2);
+    margin-bottom: 7rem;
 
     .AboutInfo {
-      margin-bottom: 7rem;
+      margin-bottom: 3em;
 
       .title {
-        font-size: 2.25rem;
+        font-size: 3rem;
         line-height: $titlelh;
-        margin-bottom: 0.7rem;
+        margin-bottom: 0.5em;
       }
 
       .contact {
         a {
-          color: rgb(140, 140, 140);
+          color: var(--lightgray);
         }
       }
     }
@@ -45,6 +43,7 @@ body {
     }
 
     .li_2 {
+      line-height: 1.5em;
       flex: 1;
     }
   }
@@ -56,7 +55,7 @@ body {
       .AboutInfo {
         margin-bottom: 2.5rem;
         .title {
-          font-size: 1.35rem;
+          font-size: 1.75rem;
           margin-bottom: 0.9rem;
         }
       }

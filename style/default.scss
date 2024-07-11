@@ -2,14 +2,14 @@
 :root {
   --blue: rgb(60, 145, 255);
   --red: rgb(255, 115, 90);
-  --lightgray: rgb(220, 220, 220);
+  --lightgray: rgb(200, 200, 200);
 }
 
-$default-f: 1.1vw;
+$default-f: 0.9vw;
 $mobile-f: 3.9vw;
+// line height
 $lh: 1.4em;
 $titlelh: 1.25em;
-// line height
 $padding: 0 2.5vw 0 2.5vw;
 $vh-space: 4vh;
 
