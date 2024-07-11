@@ -72,9 +72,9 @@ body .container .box .thumbnail-box .thumbnail:hover {
   }
   body .category {
     width: 85vw;
-    margin-top: 1.9rem;
+    margin-top: 3rem;
     line-height: 1.5em;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
   body .category > a {
     margin-right: 0.8em;
@@ -86,15 +86,14 @@ body .container .box .thumbnail-box .thumbnail:hover {
   }
   body .container .box {
     width: 100%;
-    height: 42vh;
+    height: 20rem;
     margin-bottom: 0.1em;
     /* 아래쪽 간격 유지 */
-    font-size: 0.8rem;
     align-items: start;
     text-align: left;
   }
   body .container .box .thumbnail-box {
     width: 100%;
-    height: 12rem;
+    height: 16rem;
   }
 }

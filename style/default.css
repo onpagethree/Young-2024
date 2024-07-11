@@ -108,7 +108,7 @@ body header #menu:hover {
 body footer {
   background-color: rgb(245, 245, 245);
   margin: 0 -2.5vw 0 -2.5vw;
-  width: 100%;
+  width: 100vw;
   padding: 0 2.5vw 0 2.5vw;
   padding-top: 4vh;
   padding-bottom: 4vh;
@@ -123,17 +123,18 @@ body footer .footer_box {
 }
 body footer .footer_box .footer_left {
   width: 50vw;
-  padding-right: 8vw;
+  padding-right: 5vw;
 }
 body footer .footer_box .footer_right {
   flex: 1;
-  padding-right: 8vw;
+  padding-right: 5vw;
 }
 
 /* 모바일사이즈  모바일사이즈  모바일사이즈 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
   html {
-    font-size: 5vw;
+    font-size: 3.9vw;
+    line-height: 1.4em;
   }
   html body {
     padding: 0 2.5vw 0 2.5vw;
@@ -144,17 +145,18 @@ body footer .footer_box .footer_right {
     /*HEADER 헤더 모바일사이즈*/
   }
   html body header .header_name {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     position: relative;
   }
   html body header .header_menu {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   html body header #menu {
     margin-left: 2vw;
   }
   html body footer {
-    font-size: 0.55rem;
+    font-size: 0.82rem;
+    width: 100vw;
     margin: 0 -2.5vw 0 -2.5vw;
     padding-top: 2.8vh;
     padding-left: 1em;

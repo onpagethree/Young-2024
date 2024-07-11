@@ -1,5 +1,5 @@
 $default-f: 1.3vw;
-$mobile-f: 5vw;
+$mobile-f: 3.9vw;
 $lh: 1.4em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
@@ -31,9 +31,14 @@ $vh-space: 4vh;
   /* 포커스 효과 없애기 */
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
 @media only screen and (max-width: 700px) {
   #textInput {
-    margin-top: 2rem;
+    margin-top: 3rem;
 
     font-size: 2.6rem;
     line-height: 1.25em;

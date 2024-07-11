@@ -59,7 +59,7 @@ body .container .mid_text {
   color: black;
   text-align: center;
   padding: 3.5vh 0 6vh 0;
-  font-size: 4.25vw;
+  font-size: 3.315vw;
   line-height: 1.45em;
 }
 body .container .mid_text_double {
@@ -112,7 +112,7 @@ body .container .youtube embed {
 /* 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
   body .container {
-    margin-top: 7.2vh;
+    margin-top: 5.5rem;
     /* 프로젝트 설명 모바일사이즈 */
     /*IMG IMG 중간 글 모바일*/
     /* 프로젝트 중간글 더블더블 모바일 */
@@ -128,12 +128,11 @@ body .container .youtube embed {
     width: 80vw;
   }
   body .container .project-info .info_left .title {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     margin-bottom: 3vh;
   }
   body .container .project-info .info_right {
     padding-right: 0vw;
-    font-size: 0.8rem;
     /* 프로젝트 크레딧 모바일*/
   }
   body .container .project-info .info_right .caption {
@@ -145,20 +144,18 @@ body .container .youtube embed {
   body .container .project-info .info_right .credit_box {
     width: 98%;
     font-size: 1.05em;
-    line-height: 1.2em;
+    line-height: 1.25em;
   }
   body .container .project-info .info_right .credit_1 {
     width: 24%;
   }
   body .container .mid_text {
     padding: 3.5vw 2.5vw 6vw 2.5vw;
-    font-size: 0.8rem;
   }
   body .container .mid_text_double {
     margin-top: 3vh;
     margin-bottom: 3vh;
     flex-direction: column;
-    font-size: 0.8rem;
   }
   body .container .mid_text_double .text_left {
     width: 100%;

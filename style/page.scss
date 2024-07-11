@@ -1,5 +1,5 @@
 $default-f: 1.3vw;
-$mobile-f: 5vw;
+$mobile-f: 3.9vw;
 $lh: 1.45em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
@@ -148,7 +148,7 @@ body {
 @media only screen and (max-width: 700px) {
   body {
     .container {
-      margin-top: calc($vh-space * 1.8);
+      margin-top: 5.5rem;
 
       /* 프로젝트 설명 모바일사이즈 */
       .project-info {
@@ -161,14 +161,13 @@ body {
           width: 80vw;
 
           .title {
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             margin-bottom: calc($vh-space * 0.75);
           }
         }
 
         .info_right {
           padding-right: 0vw;
-          font-size: 0.8rem;
 
           .caption {
             margin-bottom: calc($vh-space * 1);
@@ -182,7 +181,7 @@ body {
           .credit_box {
             width: 98%;
             font-size: 1.05em;
-            line-height: 1.2em;
+            line-height: 1.25em;
           }
 
           .credit_1 {
@@ -194,7 +193,6 @@ body {
       /*IMG IMG 중간 글 모바일*/
       .mid_text {
         padding: 3.5vw 2.5vw 6vw 2.5vw;
-        font-size: 0.8rem;
       }
 
       /* 프로젝트 중간글 더블더블 모바일 */
@@ -203,7 +201,6 @@ body {
         margin-bottom: calc($vh-space * 0.75);
 
         flex-direction: column;
-        font-size: 0.8rem;
 
         .text_left {
           width: 100%;
