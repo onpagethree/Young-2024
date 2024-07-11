@@ -68,7 +68,6 @@ body .container .box .thumbnail-box .thumbnail:hover {
 /* 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
   body {
-    font-size: 0.75rem;
     /* 바디  바디  바디 mobile */
   }
   body .category {
@@ -90,6 +89,9 @@ body .container .box .thumbnail-box .thumbnail:hover {
     height: 42vh;
     margin-bottom: 0.1em;
     /* 아래쪽 간격 유지 */
+    font-size: 0.8rem;
+    align-items: start;
+    text-align: left;
   }
   body .container .box .thumbnail-box {
     width: 100%;

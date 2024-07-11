@@ -1,6 +1,6 @@
 $default-f: 1.3vw;
 $mobile-f: 5vw;
-$lh: 1.4em;
+$lh: 1.45em;
 // line height
 $padding: 0 2.5vw 0 2.5vw;
 $vh-space: 4vh;
@@ -10,7 +10,6 @@ $vh-space: 4vh;
 }
 
 /* 바디 내용 시작 */
-
 body {
   .container {
     margin-top: calc($vh-space * 2);
@@ -29,14 +28,15 @@ body {
 
         .title {
           font-size: 2.25rem;
-          line-height: 1.15em;
+          line-height: 1.25em;
         }
       }
 
       .info_right {
         flex: 1;
-
         padding-right: 5vw;
+
+        line-height: $lh;
 
         .caption {
           font-size: 1em;
@@ -48,7 +48,6 @@ body {
           color: gray;
           margin-bottom: 1.5em;
           font-size: 1.1rem;
-          line-height: $lh;
         }
 
         /* 크레딧 */
@@ -75,14 +74,18 @@ body {
       color: black;
       text-align: center;
       padding: 3.5vh 0 6vh 0;
+
+      font-size: calc($mobile-f * 0.85);
+      line-height: $lh;
     }
 
     /* 프로젝트 중간글 더블더블 */
     .mid_text_double {
       margin-top: calc($vh-space * 1.25);
       margin-bottom: calc($vh-space * 2);
-
       display: flex;
+
+      line-height: $lh;
 
       .text_left {
         width: 50%;
@@ -158,16 +161,17 @@ body {
           width: 80vw;
 
           .title {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             margin-bottom: calc($vh-space * 0.75);
           }
         }
 
         .info_right {
           padding-right: 0vw;
+          font-size: 0.8rem;
 
           .caption {
-            margin-bottom: calc($vh-space * 0.75);
+            margin-bottom: calc($vh-space * 1);
           }
 
           .info-page {
@@ -176,7 +180,8 @@ body {
 
           /* 프로젝트 크레딧 모바일*/
           .credit_box {
-            font-size: 0.94em;
+            width: 98%;
+            font-size: 1.05em;
             line-height: 1.2em;
           }
 
@@ -189,14 +194,16 @@ body {
       /*IMG IMG 중간 글 모바일*/
       .mid_text {
         padding: 3.5vw 2.5vw 6vw 2.5vw;
+        font-size: 0.8rem;
       }
 
-      /* 프로젝트 중간글 더블더블 */
+      /* 프로젝트 중간글 더블더블 모바일 */
       .mid_text_double {
         margin-top: calc($vh-space * 0.75);
         margin-bottom: calc($vh-space * 0.75);
 
         flex-direction: column;
+        font-size: 0.8rem;
 
         .text_left {
           width: 100%;
