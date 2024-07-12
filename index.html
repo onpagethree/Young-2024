@@ -1,61 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Young2024</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Young2024</title>
+    <link rel="stylesheet" href="./style/default.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
 
-  <link rel="stylesheet" href="./style/default.css">
-  <link rel="stylesheet" href="./style/index.css">
-</head>
+  <body>
+    <header>
+      <a class="header_name" href="./index.html"> Younghyun Song </a>
 
-<body>
-  <header>
-    <a class="header_name" href="./index.html">
-    </a>
+      <div class="header_menu">
+        <a id="menu" href="./work-all.html">Work</a>
+        <a id="menu" href="./05_about.html">About</a>
+      </div>
+    </header>
 
-    <div class="header_menu">
-      <a id="menu" href="./work-all.html">Work</a>
-      <a id="menu" href="./05_about.html">About</a>
-    </div>
-  </header>
-
-
-  <div class="typewriter__text-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-    contenteditable="true" style="--type-caret-blink-speed: 500ms;" id="textInput">
-    <span class="typewriter__type-root" data-key="0">
-      <span class="typewriter__text-selection">
-        <span class="typewriter__text-content"> <span id="info">Younghyun Song,</span> Working in <span
-            id="info">Graphic
-            Design</span> and <span id="info"> Brand Identity</span>
-          area, Based
-          in <span id="info">Seoul</span>
+    <div
+      class="typewriter__text-input"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      contenteditable="true"
+      style="--type-caret-blink-speed: 500ms"
+      id="textInput">
+      <span class="typewriter__type-root" data-key="0">
+        <span class="typewriter__text-selection">
+          <span class="typewriter__text-content">
+            <span id="info">Younghyun Song,</span> Working in
+            <span id="info">Graphic Design</span> and
+            <span id="info"> Brand Identity</span> area, Based in
+            <span id="info">Seoul</span>
+          </span>
         </span>
+        <br />
       </span>
-      <br>
-    </span>
-  </div>
-
-
-
-  <footer>
-    <div class="footer_box">
-
-      <div class="footer_left">
-        <a href="./index.html">
-          Younghyun Song
-        </a>
-      </div>
-
-      <div class="footer_right">
-        <a href="mailto:" yhyun4156@gmail.com>yhyun4156@gmail.com</a>
-        <br>
-        COPYRIGHT © 2024 Younghyun Song. <br>
-        ALL RIGHTS RESERVED
-      </div>
     </div>
-  </footer>
-</body>
 
+    <button onclick="sendEmail()">Send</button>
+
+    <footer>
+      <div class="footer_box">
+        <div class="footer_left">
+          <a href="./index.html"> Younghyun Song </a>
+        </div>
+
+        <div class="footer_right">
+          <a href="mailto:" yhyun4156@gmail.com>yhyun4156@gmail.com</a>
+          <br />
+          COPYRIGHT © 2024 Younghyun Song. <br />
+          ALL RIGHTS RESERVED
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function sendEmail() {
+        const textInput = document.getElementById("textInput");
+        const userInput = textInput.innerText || textInput.textContent;
+        const email = "yhyun4156@gmail.com";
+        const subject = "User Message";
+        const body = encodeURIComponent(userInput);
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      }
+    </script>
+  </body>
 </html>

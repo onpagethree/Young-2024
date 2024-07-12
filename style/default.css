@@ -26,10 +26,15 @@
   src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
   font-weight: 800;
 }
-/* 영문 폰트 "Mabry_pro" */
+/* 영문 폰트 "F37Blanka" */
 @font-face {
-  font-family: "Mabry_pro";
-  src: url("../source_default/Mabry_pro/Mabry-Pro-Medium.ttf");
+  font-family: "F37Blanka";
+  src: url("../source_default/F37Blanka/F37BlankaTrial-SemiBold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "F37Blanka";
+  src: url("../source_default/F37Blanka/F37BlankaTrial-Regular.otf");
   font-weight: 400;
 }
 /* 영문 폰트 "Asap" */
@@ -40,7 +45,7 @@
   list-style: none;
   text-decoration: none;
   position: relative;
-  font-family: "Asap", "gothica1", sans-serif;
+  font-family: "F37Blanka", "gothica1", sans-serif;
   font-weight: 400;
   word-break: keep-all;
 }
@@ -116,7 +121,6 @@ body footer {
   padding-bottom: 4vh;
   display: flex;
   font-size: 1rem;
-  line-height: 1.4em;
 }
 body footer .footer_box {
   display: flex;

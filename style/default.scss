@@ -36,10 +36,16 @@ $vh-space: 4vh;
   font-weight: 800;
 }
 
-/* 영문 폰트 "Mabry_pro" */
+/* 영문 폰트 "F37Blanka" */
 @font-face {
-  font-family: "Mabry_pro";
-  src: url("../source_default/Mabry_pro/Mabry-Pro-Medium.ttf");
+  font-family: "F37Blanka";
+  src: url("../source_default/F37Blanka/F37BlankaTrial-SemiBold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "F37Blanka";
+  src: url("../source_default/F37Blanka/F37BlankaTrial-Regular.otf");
   font-weight: 400;
 }
 
@@ -58,7 +64,7 @@ $vh-space: 4vh;
 
   position: relative;
 
-  font-family: "Asap", "gothica1", sans-serif;
+  font-family: "F37Blanka", "gothica1", sans-serif;
   font-weight: 400;
   word-break: keep-all;
 }
@@ -143,7 +149,6 @@ body {
     display: flex;
 
     font-size: 1rem;
-    line-height: $lh;
 
     .footer_box {
       display: flex;
