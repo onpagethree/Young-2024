@@ -59,7 +59,7 @@ body .container .mid_text {
   color: black;
   text-align: center;
   padding: 3.5vh 0 6vh 0;
-  font-size: 3.315vw;
+  font-size: 0.765vw;
   line-height: 1.4em;
 }
 body .container .mid_text_double {
@@ -149,6 +149,8 @@ body .container .youtube embed {
     width: 24%;
   }
   body .container .mid_text {
+    font-size: 3.315vw;
+    line-height: 1.4em;
     padding: 3.5vw 2.5vw 6vw 2.5vw;
   }
   body .container .mid_text_double {

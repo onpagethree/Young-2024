@@ -83,6 +83,10 @@ a:visited {
   color: rgb(60, 145, 255);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 img {
   display: block;
   margin: 0;

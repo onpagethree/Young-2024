@@ -57,14 +57,13 @@ a:visited {
   color: inherit;
 }
 
-::-moz-selection {
+::selection {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(60, 145, 255);
 }
 
-::selection {
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(60, 145, 255);
+::-webkit-scrollbar {
+  display: none;
 }
 
 img {

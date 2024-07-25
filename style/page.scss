@@ -76,7 +76,7 @@ body {
       text-align: center;
       padding: 3.5vh 0 6vh 0;
 
-      font-size: calc($mobile-f * 0.85);
+      font-size: calc($default-f * 0.85);
       line-height: $lh;
     }
 
@@ -118,7 +118,7 @@ body {
       margin-bottom: 3vh;
     }
 
-    .img-vertical > img {
+    .img-vertical>img {
       width: 50%;
       margin: 0;
     }
@@ -194,6 +194,9 @@ body {
 
       /*IMG IMG 중간 글 모바일*/
       .mid_text {
+        font-size: calc($mobile-f * 0.85);
+        line-height: $lh;
+
         padding: 3.5vw 2.5vw 6vw 2.5vw;
       }
 
