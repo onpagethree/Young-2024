@@ -18,7 +18,7 @@ body {
     font-size: 1rem;
     color: var(--lightgray);
 
-    #selected {
+    .selected {
       color: black;
     }
 
@@ -27,7 +27,7 @@ body {
     }
 
     >a:hover {
-      color: gray;
+      color: rgb(100, 100, 100);
       transition: all 0.2s linear;
     }
   }

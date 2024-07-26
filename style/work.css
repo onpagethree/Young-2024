@@ -12,14 +12,14 @@ body .category {
   font-size: 1rem;
   color: var(--lightgray);
 }
-body .category #selected {
+body .category .selected {
   color: black;
 }
 body .category > a {
   margin-right: 1.25em;
 }
 body .category > a:hover {
-  color: gray;
+  color: rgb(100, 100, 100);
   transition: all 0.2s linear;
 }
 body .container {
