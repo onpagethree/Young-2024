@@ -36,21 +36,9 @@ $vh-space: 4vh;
   font-weight: 800;
 }
 
-/* 영문 폰트 "F37Blanka" */
-@font-face {
-  font-family: "F37Blanka";
-  src: url("../source_default/F37Blanka/F37BlankaTrial-SemiBold.otf");
-  font-weight: 600;
-}
+/* 영문 폰트 "logical-variable" */
+@import url("https://use.typekit.net/vgs1vqh.css");
 
-@font-face {
-  font-family: "F37Blanka";
-  src: url("../source_default/F37Blanka/F37BlankaTrial-Regular.otf");
-  font-weight: 400;
-}
-
-/* 영문 폰트 "Asap" */
-@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
 
 // 기본 설정
 
@@ -64,7 +52,7 @@ $vh-space: 4vh;
 
   position: relative;
 
-  font-family: "F37Blanka", "gothica1", sans-serif;
+  font-family: "logical-variable", "gothica1", sans-serif;
   font-weight: 400;
   word-break: keep-all;
 }
