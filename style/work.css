@@ -10,7 +10,7 @@ body {
 body .category {
   margin-bottom: 4vh;
   font-size: 1rem;
-  color: var(--lightgray);
+  color: var(--gray);
 }
 body .category .selected {
   color: black;

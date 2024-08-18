@@ -1,8 +1,8 @@
 // 단축어 설정
 :root {
-  --blue: rgb(60, 145, 255);
-  --red: rgb(255, 115, 90);
-  --lightgray: rgb(200, 200, 200);
+  --point: rgb(233, 239, 121);
+  --lightgray: rgb(245, 245, 245);
+  --gray: rgb(200, 200, 200);
 }
 
 $default-f: 0.9vw;
@@ -39,28 +39,10 @@ $vh-space: 4vh;
 /* 영문 폰트 "barlow" */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
 
-// .barlow-medium {
+// .barlow-regular {
 //   font-family: "Barlow", sans-serif;
-//   font-weight: 500;
-//   font-style: normal;
-// }
-
-// .barlow-medium-italic {
-//   font-family: "Barlow", sans-serif;
-//   font-weight: 500;
-//   font-style: italic;
-// }
-
-// .barlow-bold {
-//   font-family: "Barlow", sans-serif;
-//   font-weight: 700;
-//   font-style: normal;
-// }
-
-// .barlow-bold-italic {
-//   font-family: "Barlow", sans-serif;
-//   font-weight: 700;
-//   font-style: italic;
+//   font-weight: 100-900;
+//   font-style: normal, italic;
 // }
 
 
@@ -76,8 +58,8 @@ $vh-space: 4vh;
 
   position: relative;
 
-  font-family: "logical-variable", "gothica1", sans-serif;
-  font-weight: 400;
+  font-family: "Barlow", "gothica1", sans-serif;
+  font-weight: 500;
   word-break: keep-all;
 }
 
@@ -91,8 +73,8 @@ a:visited {
 
 // 드래그 시 컬러 변경
 ::selection {
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(60, 145, 255);
+  background-color: var(--point);
+  color: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar {

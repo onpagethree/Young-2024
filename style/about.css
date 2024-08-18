@@ -10,7 +10,7 @@ body .container .AboutInfo .title {
   margin-bottom: 0.5em;
 }
 body .container .AboutInfo .contact a {
-  color: var(--lightgray);
+  color: var(--gray);
 }
 body .list {
   display: flex;
