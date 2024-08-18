@@ -68,13 +68,12 @@ button {
   }
 }
 
-
-
 footer {
   position: fixed;
   bottom: 0;
 }
 
+/* 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
   .typewriter__text-input {
     --type-caret-blink-speed: 500ms;
@@ -86,8 +85,6 @@ footer {
 
 
   #textInput {
-    margin-top: 3rem;
-
     font-size: 2.6rem;
     line-height: 1.25em;
   }
