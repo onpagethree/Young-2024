@@ -39,17 +39,23 @@
 .gallery-box {
   /* 모달 갤러리 썸네일 사이즈 */
   width: 46.75vw;
+  height: 100%;
   margin-bottom: -.3vh;
 
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .gallery-box>img {
+  overflow: hidden;
+
+  width: 100%;
+  max-height: 65vh;
+
+  /* 이미지 정 사이즈 */
   object-fit: cover;
-  width: auto;
-  height: 100%;
   margin: 0;
 }
 
