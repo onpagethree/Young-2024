@@ -8,9 +8,10 @@
   <TITLE>YOUNG2024</TITLE>
 
 
-  <LINK REL="STYLESHEET" HREF="./style/GALLERY/GALLERY.CSS">
+  <link rel="stylesheet" href="./style/gallery/gallery.css" />
+
   <!-- 슬라이드갤러리 -->
-  <link rel="stylesheet" href="./style/gallery/00_flickity.css">
+  <link rel="stylesheet" href="./style/gallery/00_flickity.css" />
   <script src="./style/gallery/00_flickity.pkgd.js" async></script>
 
   <!--모달갤러리 -->
@@ -18,8 +19,8 @@
   <script src="scripts.js"></script>
 
 
-  <link rel="stylesheet" href="./style/default.css">
-  <link rel="stylesheet" href="./style/page.css">
+  <link rel="stylesheet" href="./style/default.css" />
+  <link rel="stylesheet" href="./style/page.css" />
 </head>
 
 <style>
@@ -101,35 +102,42 @@
 
     </div>
 
-    <div class="image-gallery">
-      <a href="./works/24_sorot/Sorot_04-1.jpg" data-toggle="lightbox" data-gallery="example-gallery"
-        class="gallery-box"><img src="./works/24_sorot/Sorot_04-1.jpg">
-      </a>
 
-      <a href="./works/24_sorot/Sorot_04-2.jpg" data-toggle="lightbox" data-gallery="example-gallery"
-        class="gallery-box">
-        <img src="./works/24_sorot/Sorot_04-2.jpg">
+    <div class="image-gallery">
+      <a href="./works/24_sorot/Sorot_04-1.jpg" class="gallery-box">
+        <img src="./works/24_sorot/Sorot_04-1.jpg" />
+      </a>
+      <a href="./works/24_sorot/Sorot_04-2.jpg" class="gallery-box">
+        <img src="./works/24_sorot/Sorot_04-2.jpg" />
       </a>
     </div>
 
+
     <img src="./works/24_sorot/Sorot_05-1.jpg" alt="">
     <img src="./works/24_sorot/Sorot_05-2.jpg" alt="">
-
     <img src="./works/24_sorot/Sorot_06.jpg" alt="">
 
-    <div class="image-gallery">
-      <a href="./works/24_sorot/Sorot_07-1.jpg" data-toggle="lightbox" data-gallery="example-gallery"
-        class="gallery-box"><img src="./works/24_sorot/Sorot_07-1.jpg">
-      </a>
 
-      <a href="./works/24_sorot/Sorot_07-2.jpg" data-toggle="lightbox" data-gallery="example-gallery"
-        class="gallery-box">
-        <img src="./works/24_sorot/Sorot_07-2.jpg">
+    <div class="image-gallery">
+      <a href="./works/24_sorot/Sorot_07-1.jpg" class="gallery-box">
+        <img src="./works/24_sorot/Sorot_07-1.jpg" />
+      </a>
+      <a href="./works/24_sorot/Sorot_07-1.jpg" class="gallery-box">
+        <img src="./works/24_sorot/Sorot_07-1.jpg" />
       </a>
     </div>
 
     <img src="./works/24_sorot/Sorot_08-1.jpg" alt="">
     <img src="./works/24_sorot/Sorot_08-2.jpg" alt="">
+
+
+    <!-- 라이트박스 HTML 구조 -->
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-center">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+      </div>
+    </div>
 
   </div>
 

@@ -180,7 +180,8 @@ body {
 
         /* Lightbox image */
         .lightbox-content {
-          max-width: 90%;
+          width: auto;
+          max-height: 90%;
           display: block;
           margin: auto;
         }

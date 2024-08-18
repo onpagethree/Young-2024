@@ -142,7 +142,8 @@ body .container .lightbox .lightbox-center {
   /* Lightbox image */
 }
 body .container .lightbox .lightbox-center .lightbox-content {
-  max-width: 90%;
+  width: auto;
+  max-height: 90%;
   display: block;
   margin: auto;
 }
