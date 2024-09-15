@@ -39,6 +39,9 @@ body {
     gap: 1vw; // 요소 사이의 간격을 설정
     // 만약 gap 속성을 지원하지 않는 브라우저를 고려한다면 margin을 사용할 수 있음
 
+    margin-bottom: 4em;
+    // footer와 간격
+
     .box {
       position: relative; // 텍스트를 절대 위치로 배치하기 위해 필요
       width: calc((100% - 1vw * 2) / 3);

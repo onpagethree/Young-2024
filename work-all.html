@@ -40,7 +40,7 @@
       </div>
     </a>
 
-    <a class="box all" id="packaging" href="./23_kakaoInsurance_OnboardingKit.html">
+    <a class="box all" href="./23_kakaoInsurance_OnboardingKit.html">
       <div class="thumbnail-box">
         <img class="thumbnail" src="./works/23_kakaoinsurance/kakaoOnboarding_thumbnail.jpg" alt="" />
         <div class="text-container"> Kakaopay Insurance Onboarding Kit</div>
@@ -309,6 +309,67 @@
         }
       });
     });
+
+
+
+    //  backgroundColor을 사진에서 추출하기
+    //  backgroundColor을 사진에서 추출하기
+
+    // 이미지에서 가운데 부분의 색상 추출
+    function extractColorFromImage(image, callback) {
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      const img = new Image();
+      img.crossOrigin = 'Anonymous'; // CORS 지원이 필요함
+      img.src = image.src;
+
+      img.onload = function () {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        context.drawImage(img, 0, 0);
+
+        // 가운데 부분의 좌표 계산
+        const centerX = Math.floor(img.width / 3);
+        const centerY = Math.floor(img.height / 3);
+
+        // 가운데 픽셀 색상 추출
+        const data = context.getImageData(centerX, centerY, 1, 1).data;
+        const r = data[0];
+        const g = data[1];
+        const b = data[2];
+        const a = data[3] / 255;
+
+        // Calculate brightness
+        const brightness = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+
+        if (brightness < 30) {
+          callback('rgba(255, 255, 255)'); // 흰색으로 대체
+        } else {
+          const color = `rgba(${r}, ${g}, ${b}, ${a})`;
+          callback(color);
+        }
+      };
+    }
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('.box').forEach(box => {
+        const img = box.querySelector('.thumbnail-box img');
+        if (img) {
+          extractColorFromImage(img, color => {
+            const textContainer = box.querySelector('.text-container');
+            if (textContainer) {
+              textContainer.style.backgroundColor = color;
+            }
+          });
+        }
+      });
+    });
+
+
+
+
   </script>
 </body>
 
