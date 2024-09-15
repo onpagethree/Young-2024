@@ -14,7 +14,7 @@
 @font-face {
   font-family: "gothica1";
   src: url(../source_default/Gothica1/GothicA1-Medium.ttf);
-  font-weight: 400;
+  font-weight: 500;
 }
 @font-face {
   font-family: "gothica1";
@@ -26,6 +26,11 @@
   src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
   font-weight: 800;
 }
+@font-face {
+  font-family: "HALRepost";
+  src: url(../source_default/HALRepost/HALRepostTest-Regular.otf);
+  font-weight: 500;
+}
 /* 영문 폰트 "barlow" */
 * {
   box-sizing: border-box;
@@ -34,7 +39,7 @@
   list-style: none;
   text-decoration: none;
   position: relative;
-  font-family: "Barlow", "gothica1", sans-serif;
+  font-family: "HALRepost", "gothica1", sans-serif;
   font-weight: 500;
   word-break: keep-all;
 }
