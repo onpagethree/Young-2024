@@ -49,6 +49,10 @@ body .container .project-info .info_right .caption {
   font-size: 1em;
   margin-bottom: 1.5em;
 }
+body .container .project-info .info_right .caption #awardPage {
+  width: 15em;
+  margin: 2.5em 0 2.7em;
+}
 body .container .project-info .info_right .info-page {
   color: gray;
   margin-bottom: 1.5em;
@@ -151,6 +155,7 @@ body .container .lightbox .lightbox-center .lightbox-content {
 @media only screen and (max-width: 700px) {
   body .container {
     margin-top: 5.5rem;
+    font-size: 0.82rem;
     /* 프로젝트 설명 모바일사이즈 */
     /*IMG IMG 중간 글 모바일*/
     /* 프로젝트 중간글 더블더블 모바일 */
@@ -175,22 +180,24 @@ body .container .lightbox .lightbox-center .lightbox-content {
   }
   body .container .project-info .info_right .caption {
     margin-bottom: 4vh;
-    font-size: 0.85rem;
+  }
+  body .container .project-info .info_right .caption #awardPage {
+    width: 12em;
+    margin: 2.5em 0 2.7em;
   }
   body .container .project-info .info_right .info-page {
     margin-bottom: 3vh;
   }
   body .container .project-info .info_right .credit_box {
     width: 98%;
-    font-size: 1.05em;
+    font-size: 0.95em;
     line-height: 1.25em;
   }
   body .container .project-info .info_right .credit_1 {
     width: 24%;
   }
   body .container .mid_text {
-    font-size: 3.315vw;
-    line-height: 1.5em;
+    font-size: 0.82rem;
     padding: 3.5vw 2.5vw 6vw 2.5vw;
   }
   body .container .mid_text_double {

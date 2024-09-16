@@ -53,6 +53,11 @@ body {
         .caption {
           font-size: 1em;
           margin-bottom: 1.5em;
+
+          #awardPage {
+            width: 15em;
+            margin: 2.5em 0 2.7em;
+          }
         }
 
         /* 연결 페이지가 있는 경우 */
@@ -196,6 +201,7 @@ body {
   body {
     .container {
       margin-top: 5.5rem;
+      font-size: .82rem;
 
       /* 프로젝트 설명 모바일사이즈 */
       .project-info {
@@ -218,7 +224,11 @@ body {
 
           .caption {
             margin-bottom: calc($vh-space * 1);
-            font-size: .85rem;
+
+            #awardPage {
+              width: 12em;
+              margin: 2.5em 0 2.7em;
+            }
           }
 
           .info-page {
@@ -228,7 +238,7 @@ body {
           /* 프로젝트 크레딧 모바일*/
           .credit_box {
             width: 98%;
-            font-size: 1.05em;
+            font-size: .95em;
             line-height: 1.25em;
           }
 
@@ -240,8 +250,7 @@ body {
 
       /*IMG IMG 중간 글 모바일*/
       .mid_text {
-        font-size: calc($mobile-f * 0.85);
-        line-height: 1.5em;
+        font-size: .82rem;
 
         padding: 3.5vw 2.5vw 6vw 2.5vw;
       }
