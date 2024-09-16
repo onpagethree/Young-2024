@@ -315,7 +315,6 @@
 
     //  backgroundColor을 사진에서 추출하기
     //  backgroundColor을 사진에서 추출하기
-
     function extractColorFromImage(image, callback) {
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
@@ -329,7 +328,7 @@
         context.drawImage(img, 0, 0);
 
         // 가운데 부분의 좌표 계산
-        const centerX = Math.floor(img.width / 3.01);
+        const centerX = Math.floor(img.width / 3.015);
         const centerY = Math.floor(img.height / 3);
 
         // 가운데 픽셀 색상 추출
@@ -342,29 +341,42 @@
         // 밝기 계산
         const brightness = 0.2126 * r + 0.7152 * g + 0.0722 * b;
 
-        if (brightness < 50) {
-          callback('rgba(255, 255, 255)', brightness); // 너무 어두운 경우 흰색으로 대체
-        } else {
-          const color = `rgba(${r}, ${g}, ${b}, ${a})`;
-          callback(color, brightness);
-        }
+        // 너무 어두운 경우 흰색으로 대체
+        const color = (brightness < 50) ? 'rgba(255, 255, 255)' : `rgba(${r}, ${g}, ${b}, ${a})`;
+        callback(color, brightness);
       };
     }
-
 
     function applyColorBasedOnDevice() {
       document.querySelectorAll('.box').forEach(box => {
         const img = box.querySelector('.thumbnail-box img');
         if (img) {
-          extractColorFromImage(img, color => {
+          extractColorFromImage(img, (color, brightness) => {
             const textContainer = box.querySelector('.text-container');
             if (textContainer) {
-              if (window.innerWidth <= 700) {  // 모바일 환경
-                textContainer.style.color = color;  // 텍스트 색상 변경 (이미지에서 추출한 색상)
+              const currentColor = getComputedStyle(textContainer).color;
 
+              if (window.innerWidth <= 700) {  // 모바일 환경
+                // 흰색으로 대체된 경우 텍스트 색상 어둡게 조정
+                if (color === 'rgba(255, 255, 255)') {
+                  textContainer.style.color = 'black';  // 흰색일 경우 텍스트를 검정으로 설정
+                } else if (brightness > 223) {
+                  const rgbaValues = color.match(/\d+/g).map(Number);
+                  const darkenedColor = `rgb(${Math.floor(rgbaValues[0] * 0.7)}, ${Math.floor(rgbaValues[1] * 0.7)}, ${Math.floor(rgbaValues[2] * 0.7)})`;
+                  textContainer.style.color = darkenedColor;  // 어두운 색상 적용
+                } else {
+                  textContainer.style.color = color;  // 원래 색상 적용
+                }
               } else {
-                textContainer.style.backgroundColor = color;  // 배경색 변경 (데스크톱)
-                textContainer.style.color = 'black';  // 데스크톱에서는 텍스트 색상 검정
+                // 데스크톱 환경
+                textContainer.style.backgroundColor = color;  // 배경색 변경
+                textContainer.style.color = 'black';  // 텍스트 색상 검정으로 설정
+
+                // 배경색이 어두운 경우 흰색으로 변경
+                if (brightness < 70) {  // 어두운 색상 조건
+                  textContainer.style.backgroundColor = 'white';  // 배경색을 흰색으로 설정
+                  textContainer.style.color = 'black';  // 텍스트 색상은 검정으로 설정
+                }
               }
             }
           });
@@ -372,16 +384,13 @@
       });
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      applyColorBasedOnDevice(); // 페이지 로드 시 호출
-    });
-
-    // 윈도우 리사이즈 시에도 반응
-    window.addEventListener('resize', function () {
-      applyColorBasedOnDevice();
-    });
 
 
+
+
+
+    window.addEventListener('DOMContentLoaded', applyColorBasedOnDevice);
+    window.addEventListener('resize', applyColorBasedOnDevice); // 윈도우 크기 변경 시 색상 재적용
 
 
   </script>
