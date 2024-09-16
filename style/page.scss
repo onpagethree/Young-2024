@@ -1,7 +1,7 @@
 $default-f: 0.9vw;
 $mobile-f: 3.9vw;
 // line height
-$lh: 1.4em;
+$lh: 1.55em;
 $titlelh: 1.25em;
 $padding: 0 2.5vw 0 2.5vw;
 $vh-space: 4vh;
@@ -94,7 +94,6 @@ body {
       padding: 3.5vh 0 6vh 0;
 
       font-size: calc($default-f * 0.85);
-      line-height: 1.5em;
     }
 
     /* 프로젝트 중간글 더블더블 */
@@ -102,8 +101,6 @@ body {
       margin-top: calc($vh-space * 1.25);
       margin-bottom: calc($vh-space * 2);
       display: flex;
-
-      line-height: 1.5em;
 
       .text_left {
         width: 50%;
@@ -239,7 +236,6 @@ body {
           .credit_box {
             width: 98%;
             font-size: 1rem;
-            line-height: 1.25em;
           }
 
           .credit_1 {
@@ -261,8 +257,6 @@ body {
         margin-bottom: calc($vh-space * 0.75);
 
         flex-direction: column;
-
-        line-height: 1.5em;
 
         .text_left {
           width: 100%;

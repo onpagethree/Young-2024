@@ -41,7 +41,7 @@ body .container .project-info .info_left .title {
 body .container .project-info .info_right {
   flex: 1;
   padding-right: 5vw;
-  line-height: 1.4em;
+  line-height: 1.55em;
   /* 연결 페이지가 있는 경우 */
   /* 크레딧 */
 }
@@ -75,13 +75,11 @@ body .container .mid_text {
   text-align: center;
   padding: 3.5vh 0 6vh 0;
   font-size: 0.765vw;
-  line-height: 1.5em;
 }
 body .container .mid_text_double {
   margin-top: 5vh;
   margin-bottom: 8vh;
   display: flex;
-  line-height: 1.5em;
 }
 body .container .mid_text_double .text_left {
   width: 50%;
@@ -191,7 +189,6 @@ body .container .lightbox .lightbox-center .lightbox-content {
   body .container .project-info .info_right .credit_box {
     width: 98%;
     font-size: 1rem;
-    line-height: 1.25em;
   }
   body .container .project-info .info_right .credit_1 {
     width: 24%;
@@ -204,7 +201,6 @@ body .container .lightbox .lightbox-center .lightbox-content {
     margin-top: 3vh;
     margin-bottom: 3vh;
     flex-direction: column;
-    line-height: 1.5em;
   }
   body .container .mid_text_double .text_left {
     width: 100%;
