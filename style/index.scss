@@ -17,11 +17,12 @@ $vh-space: 4vh;
 }
 
 .typewriter__text-input {
-  --type-caret-blink-speed: 500ms;
   max-height: 5em;
   /* 최대 높이 제한 */
   overflow-y: auto;
   /* 스크롤 가능하게 설정 */
+
+  margin-bottom: 2em;
 }
 
 

@@ -88,20 +88,18 @@ body .container .box .thumbnail-box:hover .text-container {
     margin-right: 0.8em;
   }
   body .container {
-    display: flex;
-    flex-direction: column;
-    margin-top: -0.5em;
+    gap: 2.5vw;
   }
   body .container .box {
     width: 100%;
-    height: 20rem;
-    margin-bottom: 0.1em;
-    /* 아래쪽 간격 유지 */
-    align-items: start;
-    text-align: left;
   }
   body .container .box .thumbnail-box {
-    width: 100%;
-    height: 16rem;
+    height: 17rem;
+  }
+  body .container .box .thumbnail-box .text-container {
+    top: 0;
+    font-size: 1em;
+    display: block;
+    height: auto;
   }
 }
