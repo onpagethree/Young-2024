@@ -315,7 +315,6 @@
     //  backgroundColor을 사진에서 추출하기
     //  backgroundColor을 사진에서 추출하기
 
-    // 이미지에서 가운데 부분의 색상 추출
     function extractColorFromImage(image, callback) {
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
@@ -339,11 +338,11 @@
         const b = data[2];
         const a = data[3] / 255;
 
-        // Calculate brightness
+        // 밝기 계산
         const brightness = 0.2126 * r + 0.7152 * g + 0.0722 * b;
 
         if (brightness < 30) {
-          callback('rgba(255, 255, 255)'); // 흰색으로 대체
+          callback('rgba(255, 255, 255)'); // 너무 어두운 경우 흰색으로 대체
         } else {
           const color = `rgba(${r}, ${g}, ${b}, ${a})`;
           callback(color);
@@ -351,20 +350,32 @@
       };
     }
 
-
-
-    document.addEventListener("DOMContentLoaded", function () {
+    function applyColorBasedOnDevice() {
       document.querySelectorAll('.box').forEach(box => {
         const img = box.querySelector('.thumbnail-box img');
         if (img) {
           extractColorFromImage(img, color => {
             const textContainer = box.querySelector('.text-container');
             if (textContainer) {
-              textContainer.style.backgroundColor = color;
+              if (window.innerWidth <= 700) {  // 모바일 환경
+                textContainer.style.color = color;  // 텍스트 색상 변경 (이미지에서 추출한 색상)
+              } else {
+                textContainer.style.backgroundColor = color;  // 배경색 변경 (데스크톱)
+                textContainer.style.color = 'black';  // 데스크톱에서는 텍스트 색상 검정
+              }
             }
           });
         }
       });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      applyColorBasedOnDevice(); // 페이지 로드 시 호출
+    });
+
+    // 윈도우 리사이즈 시에도 반응
+    window.addEventListener('resize', function () {
+      applyColorBasedOnDevice();
     });
 
 
