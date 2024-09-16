@@ -114,4 +114,8 @@ body .container .box .thumbnail-box:hover .text-container {
     height: auto;
     background-color: unset !important;
   }
+  body .container .box .thumbnail-box .text-container #award {
+    top: -3em;
+    width: 10%;
+  }
 }
