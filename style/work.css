@@ -78,9 +78,9 @@ body .container .box .thumbnail-box:hover .text-container {
     /* 바디  바디  바디 mobile */
   }
   body .category {
-    width: 85vw;
+    width: 90vw;
     margin-top: 3rem;
-    line-height: 1.5em;
+    line-height: 1.8em;
     font-size: 1.1rem;
   }
   body .category > a {
