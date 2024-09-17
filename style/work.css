@@ -94,7 +94,7 @@ body .container .box .thumbnail-box:hover .text-container {
     margin-right: 0.8em;
   }
   body .container {
-    gap: 2.5vw;
+    gap: 0vw;
   }
   body .container .box {
     width: 100%;
@@ -102,7 +102,6 @@ body .container .box .thumbnail-box:hover .text-container {
   body .container .box .thumbnail-box {
     height: 19.25rem;
     flex-direction: column;
-    margin-bottom: 1em;
   }
   body .container .box .thumbnail-box .text-container {
     position: relative;

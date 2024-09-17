@@ -126,7 +126,7 @@ body {
 
     /* 바디  바디  바디 mobile */
     .container {
-      gap: 2.5vw; // 요소 사이의 간격을 설정
+      gap: 0vw; // 요소 사이의 간격을 설정
 
       .box {
         width: 100%;
@@ -134,7 +134,7 @@ body {
         .thumbnail-box {
           height: 19.25rem;
           flex-direction: column;
-          margin-bottom: 1em; // 이미지와 텍스트 사이에 간격 추가
+          // margin-bottom: 1em; // 이미지와 텍스트 사이에 간격 추가
 
           .text-container {
             position: relative; // 절대 위치 제거
