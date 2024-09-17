@@ -355,6 +355,8 @@
       };
     }
 
+    //  Mobile ver.에서 글자 색상 적용
+    //  Mobile ver.에서 글자 색상 적용
     function applyColorBasedOnDevice() {
       document.querySelectorAll('.box').forEach(box => {
         const img = box.querySelector('.thumbnail-box img');
@@ -370,7 +372,7 @@
                   textContainer.style.color = 'black';  // 흰색일 경우 텍스트를 검정으로 설정
                 } else if (brightness > 223) {
                   const rgbaValues = color.match(/\d+/g).map(Number);
-                  const darkenedColor = `rgb(${Math.floor(rgbaValues[0] * 0.7)}, ${Math.floor(rgbaValues[1] * 0.7)}, ${Math.floor(rgbaValues[2] * 0.7)})`;
+                  const darkenedColor = `rgb(${Math.floor(rgbaValues[0] * 0.4)}, ${Math.floor(rgbaValues[1] * 0.4)}, ${Math.floor(rgbaValues[2] * 0.4)})`;
                   textContainer.style.color = darkenedColor;  // 어두운 색상 적용
                 } else {
                   textContainer.style.color = color;  // 원래 색상 적용

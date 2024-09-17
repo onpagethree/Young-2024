@@ -47,15 +47,6 @@ body {
       width: calc((100% - 1vw * 2) / 3);
       /* 각 요소 사이의 간격 */
 
-      // opacity: 0;
-      // transform: translateY(50px);
-      // transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-
-      // &.show {
-      //   opacity: 1;
-      //   transform: translateY(0);
-      // }
-
 
       .thumbnail-box {
         height: 21vw;
@@ -151,7 +142,7 @@ body {
             left: auto; // 기존 left 속성 제거
             font-size: 1em;
 
-            padding: .85em 2em; // 텍스트 상하 간격 조정
+            padding: .85em 2em 2em; // 텍스트 상하 간격 조정
 
             display: block;
             height: auto;

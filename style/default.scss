@@ -43,8 +43,8 @@ $vh-space: 4vh;
 }
 
 
-/* 영문 폰트 "barlow" */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+// /* 영문 폰트 "barlow" */
+// @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
 
 // .barlow-regular {
 //   font-family: "Barlow", sans-serif;
@@ -68,15 +68,6 @@ $vh-space: 4vh;
   font-family: "HALRepost", "gothica1", sans-serif;
   font-weight: 500;
   word-break: keep-all;
-
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-
-  &.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 a,
@@ -111,6 +102,7 @@ html {
 
 body {
   padding: $padding;
+
 
   // HEADER 헤더
   header {
@@ -148,6 +140,19 @@ body {
       color: rgba(0, 0, 0, 0.45);
 
       transition: all 0.2s ease-in;
+    }
+  }
+
+  .container {
+    &>* {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 

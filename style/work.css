@@ -108,7 +108,7 @@ body .container .box .thumbnail-box:hover .text-container {
     top: auto;
     left: auto;
     font-size: 1em;
-    padding: 0.85em 2em;
+    padding: 0.85em 2em 2em;
     display: block;
     height: auto;
     background-color: unset !important;

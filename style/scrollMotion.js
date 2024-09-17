@@ -5,7 +5,7 @@
 // 요소가 화면에 들어왔는지 감지하는 함수
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
-  const offset = window.innerHeight * -0.2; // 화면의 하단 어디까지 로딩할 것인가
+  const offset = window.innerHeight * -0.2; // 화면의 하단 20% 여유를 둠
   return (
     rect.top <= window.innerHeight - offset && rect.bottom >= 0
   );
