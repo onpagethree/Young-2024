@@ -11,22 +11,23 @@
 .gallery-cell {
   width: 60vw;
   height: 40vw;
-  margin-right: 1.25vh;
-  /* 순번 지정 */
-  counter-increment: gallery-cell;
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .gallery-cell img {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-
   width: 100%;
   height: auto;
-  overflow: hidden;
+  min-height: 100%;
+  /* 최소 높이를 부모 요소 높이에 맞춤 */
+  object-fit: cover;
+  object-position: center;
 }
+
+
 
 /*이미지 갤러리!!*/
 .image-gallery {

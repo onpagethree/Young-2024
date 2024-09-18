@@ -51,7 +51,8 @@ body {
         line-height: $lh;
 
         .caption {
-          font-size: 1em;
+          font-size: 1rem;
+
           margin-bottom: 1.5em;
 
           #awardPage {
@@ -64,7 +65,8 @@ body {
         .info-page {
           color: gray;
           margin-bottom: 1.5em;
-          font-size: 1.1rem;
+          font-size: 1.05rem;
+          line-height: $lh;
         }
 
         /* 크레딧 */
@@ -74,6 +76,9 @@ body {
           border-top: 1px solid black;
           margin-top: 0.4em;
           padding-top: 0.4em;
+
+          font-size: 1.05rem;
+          line-height: $lh;
 
           .credit_1 {
             width: 30%;
@@ -230,6 +235,7 @@ body {
 
           .info-page {
             margin-bottom: calc($vh-space * 0.75);
+            font-size: .94rem;
           }
 
           /* 프로젝트 크레딧 모바일*/
@@ -239,7 +245,7 @@ body {
           }
 
           .credit_1 {
-            width: 24%;
+            width: 23%;
           }
         }
       }

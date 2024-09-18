@@ -46,7 +46,7 @@ body .container .project-info .info_right {
   /* 크레딧 */
 }
 body .container .project-info .info_right .caption {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 1.5em;
 }
 body .container .project-info .info_right .caption #awardPage {
@@ -56,13 +56,16 @@ body .container .project-info .info_right .caption #awardPage {
 body .container .project-info .info_right .info-page {
   color: gray;
   margin-bottom: 1.5em;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.55em;
 }
 body .container .project-info .info_right .credit_box {
   display: flex;
   border-top: 1px solid black;
   margin-top: 0.4em;
   padding-top: 0.4em;
+  font-size: 1.05rem;
+  line-height: 1.55em;
 }
 body .container .project-info .info_right .credit_box .credit_1 {
   width: 30%;
@@ -185,13 +188,14 @@ body .container .lightbox .lightbox-center .lightbox-content {
   }
   body .container .project-info .info_right .info-page {
     margin-bottom: 3vh;
+    font-size: 0.94rem;
   }
   body .container .project-info .info_right .credit_box {
     width: 98%;
     font-size: 0.94rem;
   }
   body .container .project-info .info_right .credit_1 {
-    width: 24%;
+    width: 23%;
   }
   body .container .mid_text {
     font-size: 0.9rem;
