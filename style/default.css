@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 :root {
   --point: rgb(233, 239, 121);
   --lightgray: rgb(245, 245, 245);
@@ -15,21 +16,25 @@
   src: url(../source_default/Gothica1/GothicA1-Medium.ttf);
   font-weight: 500;
 }
+
 @font-face {
   font-family: "gothica1";
   src: url(../source_default/Gothica1/GothicA1-SemiBold.ttf);
   font-weight: 600;
 }
+
 @font-face {
   font-family: "gothica1";
   src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
   font-weight: 800;
 }
+
 @font-face {
   font-family: "HALRepost";
   src: url(../source_default/HALRepost/HALRepostTest-Regular.otf);
   font-weight: 500;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -74,12 +79,14 @@ body {
   padding: 0 2.5vw 0 2.5vw;
   /* FOOTER 하단바 웹사이즈 */
 }
+
 body header {
   margin: 3vh 0 7rem 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
+
 body header .header_name {
   font-size: 1.5rem;
   position: fixed;
@@ -87,31 +94,38 @@ body header .header_name {
   mix-blend-mode: overlay;
   /* Multiply 효과 적용 */
 }
+
 body header .header_name:hover {
   color: var(--blue);
 }
+
 body header .header_menu {
   font-size: 1.5rem;
   position: absolute;
   right: 0.25rem;
 }
+
 body header #menu {
   margin-left: 2vw;
   color: rgb(0, 0, 0);
 }
+
 body header #menu:hover {
   color: rgba(0, 0, 0, 0.45);
   transition: all 0.2s ease-in;
 }
-body .container > * {
+
+body .container>* {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
-body .container > *.show {
+
+body .container>*.show {
   opacity: 1;
   transform: translateY(0);
 }
+
 body footer {
   background-color: rgb(245, 245, 245);
   margin: 0 -2.5vw 0 -2.5vw;
@@ -122,15 +136,18 @@ body footer {
   display: flex;
   font-size: 1rem;
 }
+
 body footer .footer_box {
   display: flex;
   justify-content: space-between;
   margin-bottom: 4vh;
 }
+
 body footer .footer_box .footer_left {
   width: 50vw;
   padding-right: 5vw;
 }
+
 body footer .footer_box .footer_right {
   flex: 1;
   padding-right: 5vw;
@@ -142,24 +159,30 @@ body footer .footer_box .footer_right {
     font-size: 3.9vw;
     line-height: 1.45em;
   }
+
   html body {
     padding: 0 2.5vw 0 2.5vw;
     /* FOOTER 하단바 모바일사이즈 */
   }
+
   html body header {
     margin: 2vh 0 4rem 0;
     /*HEADER 헤더 모바일사이즈*/
   }
+
   html body header .header_name {
     font-size: 1.2rem;
     position: relative;
   }
+
   html body header .header_menu {
     font-size: 1.2rem;
   }
+
   html body header #menu {
     margin-left: 0.7em;
   }
+
   html body footer {
     font-size: 0.9rem;
     width: 100vw;
@@ -167,9 +190,11 @@ body footer .footer_box .footer_right {
     padding-top: 2.8vh;
     padding-left: 1em;
   }
+
   html body footer .footer_box {
     margin-bottom: 0;
   }
+
   html body footer .footer_box .footer_left {
     display: none;
     margin-right: 5vw;
