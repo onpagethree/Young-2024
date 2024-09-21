@@ -68,6 +68,7 @@ body {
           /* 테두리 제거 */
           cursor: pointer;
           /* 마우스 포인터를 가리키는 손 모양으로 변경 */
+          color: black;
           font-size: .95em;
           text-decoration: underline;
           /* 밑줄 추가 */
@@ -160,6 +161,17 @@ body {
       height: auto;
 
       margin-bottom: 3vh;
+    }
+
+
+    /* 이미지가 화면을 꽉 채우게 하기 위한 스타일 */
+    .full-width-img {
+      width: 100vw;
+      max-width: 100vw;
+      height: auto;
+      /* 뷰포트 전체 너비로 설정 */
+      margin-left: -2.5vw;
+      margin-right: -2.5vw;
     }
 
     /*세로이미지*/
@@ -260,6 +272,7 @@ body {
 
           .caption {
             margin-bottom: calc($vh-space * 1);
+            padding-right: 0;
           }
 
           #awardPage {
