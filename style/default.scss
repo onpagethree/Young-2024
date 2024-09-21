@@ -169,6 +169,10 @@ body {
 
     font-size: 1rem;
 
+    a:hover {
+      opacity: 0.5;
+    }
+
     .footer_box {
       display: flex;
       justify-content: space-between;
