@@ -30,6 +30,11 @@
   src: url(../source_default/HALRepost/HALRepostTest-Regular.otf);
   font-weight: 500;
 }
+@font-face {
+  font-family: "HALRepostMono";
+  src: url(../source_default/HALRepost/HALRepostMonoTest-Regular.otf);
+  font-weight: 500;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -113,30 +118,18 @@ body .container > *.show {
   transform: translateY(0);
 }
 body footer {
-  background-color: rgb(245, 245, 245);
-  margin: 0 -2.5vw 0 -2.5vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-size: 0.85rem;
   width: 100vw;
-  padding: 0 2.5vw 0 2.5vw;
-  padding-top: 4vh;
-  padding-bottom: 4vh;
+  justify-content: center;
+  text-align: center;
+}
+body footer #underline {
   display: flex;
-  font-size: 1rem;
-}
-body footer a:hover {
-  opacity: 0.5;
-}
-body footer .footer_box {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4vh;
-}
-body footer .footer_box .footer_left {
-  width: 50vw;
-  padding-right: 5vw;
-}
-body footer .footer_box .footer_right {
-  flex: 1;
-  padding-right: 5vw;
+  justify-content: center;
+  gap: 0.2vw;
+  margin-top: -0.2vw;
 }
 
 /* 모바일사이즈  모바일사이즈  모바일사이즈 모바일사이즈  모바일사이즈  모바일사이즈 */

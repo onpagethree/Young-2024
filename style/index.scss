@@ -12,10 +12,6 @@ $vh-space: 4vh;
 
 // -----Index CSS
 
-#info {
-  color: black;
-}
-
 .typewriter__text-input {
   max-height: 5em;
   /* 최대 높이 제한 */
@@ -27,7 +23,7 @@ $vh-space: 4vh;
 
 
 #textInput {
-  color: var(--gray);
+  color: black;
   display: inline-block;
 
   font-size: 7.25rem;

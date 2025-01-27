@@ -42,6 +42,11 @@ $vh-space: 4vh;
   font-weight: 500;
 }
 
+@font-face {
+  font-family: "HALRepostMono";
+  src: url(../source_default/HALRepost/HALRepostMonoTest-Regular.otf);
+  font-weight: 500;
+}
 
 // /* 영문 폰트 "barlow" */
 // @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
@@ -158,35 +163,19 @@ body {
 
   /* FOOTER 하단바 웹사이즈 */
   footer {
-    background-color: rgb(245, 245, 245);
-    margin: 0 -2.5vw 0 -2.5vw;
+    padding-top: calc($vh-space / 2);
+    padding-bottom: calc($vh-space / 2);
+
+    font-size: .85rem;
     width: 100vw;
+    justify-content: center;
+    text-align: center;
 
-    padding: $padding;
-    padding-top: $vh-space;
-    padding-bottom: $vh-space;
-    display: flex;
-
-    font-size: 1rem;
-
-    a:hover {
-      opacity: 0.5;
-    }
-
-    .footer_box {
+    #underline {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: $vh-space;
-
-      .footer_left {
-        width: 50vw;
-        padding-right: 5vw;
-      }
-
-      .footer_right {
-        flex: 1;
-        padding-right: 5vw;
-      }
+      justify-content: center;
+      gap: .2vw;
+      margin-top: -.2vw;
     }
   }
 }

@@ -3,10 +3,6 @@
   text-decoration: underline;
 }
 
-#info {
-  color: black;
-}
-
 .typewriter__text-input {
   max-height: 5em;
   /* 최대 높이 제한 */
@@ -16,7 +12,7 @@
 }
 
 #textInput {
-  color: var(--gray);
+  color: black;
   display: inline-block;
   font-size: 7.25rem;
   line-height: 1.35em;
