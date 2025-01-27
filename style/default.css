@@ -1,6 +1,5 @@
 @charset "UTF-8";
 :root {
-  --point: rgb(233, 239, 121);
   --lightgray: rgb(245, 245, 245);
   --gray: rgb(200, 200, 200);
 }
@@ -84,6 +83,7 @@ body header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  z-index: 100;
 }
 body header .header_name {
   font-size: 1.5rem;
@@ -156,17 +156,10 @@ body footer #underline {
     margin-left: 0.7em;
   }
   html body footer {
-    font-size: 0.9rem;
-    width: 100vw;
-    margin: 0 -2.5vw 0 -2.5vw;
-    padding-top: 2.8vh;
-    padding-left: 1em;
+    font-size: 0.6rem;
+    padding-bottom: 1.6vh;
   }
-  html body footer .footer_box {
-    margin-bottom: 0;
-  }
-  html body footer .footer_box .footer_left {
-    display: none;
-    margin-right: 5vw;
+  html body footer #underline {
+    margin-top: -2vw;
   }
 }

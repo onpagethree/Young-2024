@@ -31,14 +31,15 @@
     <span class="typewriter__type-root" data-key="0">
       <span class="typewriter__text-selection">
         <span class="typewriter__text-content">
-          Younghyun Song</span>
+        </span>
       </span>
     </span>
     <br>
     </span>
   </div>
 
-  <button onclick="sendEmail()">Send <br>Mail</button>
+  <div class="btncentre"> <button></button>
+  </div>
 
   <footer>
     © Younghyun Song. 2025
@@ -51,14 +52,47 @@
 
 
   <script>
-    function sendEmail() {
-      const textInput = document.getElementById("textInput");
-      const userInput = textInput.innerText || textInput.textContent;
-      const email = "yhyun4156@gmail.com";
-      const subject = "User Message";
-      const body = encodeURIComponent(userInput);
-      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-    }
+    document.addEventListener("click", function () {
+      window.location.href = "./work-all.html";
+    });
+
+
+    // 5가지 색상 배열
+    const colors = [
+      "rgb(233, 239, 121)", // 예: 연한 빨강
+      "#77dd77", // 예: 연한 초록
+      "#fdfd96", // 예: 연한 노랑
+      "#84b6f4", // 예: 연한 파랑
+      "#fdcae1"  // 예: 연한 핑크
+    ];
+
+    // 버튼 요소 가져오기
+    const button = document.querySelector(".btncentre button");
+
+    // hover 시 적용된 색을 저장할 변수
+    let lastRandomColor = "";
+
+    // (1) 마우스가 올라갈 때 (hover 시작)
+    button.addEventListener("mouseenter", () => {
+      // 무작위 색상 선택
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      // 버튼 배경 적용
+      button.style.backgroundColor = randomColor;
+      // 전역 변수에 저장
+      lastRandomColor = randomColor;
+    });
+
+    // (2) 마우스가 나갈 때 (hover 해제)
+    button.addEventListener("mouseleave", () => {
+      // 1) 버튼 배경은 원래 색으로 되돌리고 싶으면:
+      button.style.backgroundColor = "var(--lightgray)";
+
+      // 2) HTML 배경(또는 body 배경) 바꾸기
+      // document.documentElement.style.backgroundColor = lastRandomColor; 
+      // => html 태그 배경색
+      // 혹은 body 배경색:
+      document.body.style.backgroundColor = lastRandomColor;
+    });
   </script>
 </body>
 

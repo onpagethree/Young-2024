@@ -1,6 +1,5 @@
 // 단축어 설정
 :root {
-  --point: rgb(233, 239, 121);
   --lightgray: rgb(245, 245, 245);
   --gray: rgb(200, 200, 200);
 }
@@ -115,6 +114,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    z-index: 100;
 
     //  HEADER 헤더 제목
     .header_name {
@@ -208,20 +208,11 @@ body {
 
       /* FOOTER 하단바 모바일사이즈 */
       footer {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
+        padding-bottom: calc($vh-space / 2.5);
 
-        width: 100vw;
-        margin: 0 -2.5vw 0 -2.5vw;
-        padding-top: calc($vh-space * 0.7);
-        padding-left: 1em;
-
-        .footer_box {
-          margin-bottom: 0;
-
-          .footer_left {
-            display: none;
-            margin-right: 5vw;
-          }
+        #underline {
+          margin-top: -2vw;
         }
       }
     }

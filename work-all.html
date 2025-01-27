@@ -351,45 +351,6 @@
       };
     }
 
-    //  Mobile ver.에서 글자 색상 적용
-    //  Mobile ver.에서 글자 색상 적용
-    function applyColorBasedOnDevice() {
-      document.querySelectorAll('.box').forEach(box => {
-        const img = box.querySelector('.thumbnail-box img');
-        if (img) {
-          extractColorFromImage(img, (color, brightness) => {
-            const textContainer = box.querySelector('.text-container');
-            if (textContainer) {
-              const currentColor = getComputedStyle(textContainer).color;
-
-              if (window.innerWidth <= 700) {  // 모바일 환경
-                // 흰색으로 대체된 경우 텍스트 색상 어둡게 조정
-                if (color === 'rgba(255, 255, 255)') {
-                  textContainer.style.color = 'black';  // 흰색일 경우 텍스트를 검정으로 설정
-                } else if (brightness > 223) {
-                  const rgbaValues = color.match(/\d+/g).map(Number);
-                  const darkenedColor = `rgb(${Math.floor(rgbaValues[0] * 0.4)}, ${Math.floor(rgbaValues[1] * 0.4)}, ${Math.floor(rgbaValues[2] * 0.4)})`;
-                  textContainer.style.color = darkenedColor;  // 어두운 색상 적용
-                } else {
-                  textContainer.style.color = color;  // 원래 색상 적용
-                }
-              } else {
-                // 데스크톱 환경
-                textContainer.style.backgroundColor = color;  // 배경색 변경
-                textContainer.style.color = 'black';  // 텍스트 색상 검정으로 설정
-
-                // 배경색이 어두운 경우 흰색으로 변경
-                if (brightness < 70) {  // 어두운 색상 조건
-                  textContainer.style.backgroundColor = 'white';  // 배경색을 흰색으로 설정
-                  textContainer.style.color = 'black';  // 텍스트 색상은 검정으로 설정
-                }
-              }
-            }
-          });
-        }
-      });
-    }
-
 
 
 
