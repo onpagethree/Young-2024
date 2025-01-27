@@ -119,9 +119,8 @@ body .container > *.show {
 }
 body footer {
   padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-bottom: 4vh;
   font-size: 0.85rem;
-  width: 100vw;
   justify-content: center;
   text-align: center;
 }

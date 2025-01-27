@@ -164,10 +164,9 @@ body {
   /* FOOTER 하단바 웹사이즈 */
   footer {
     padding-top: calc($vh-space / 2);
-    padding-bottom: calc($vh-space / 2);
+    padding-bottom: $vh-space;
 
     font-size: .85rem;
-    width: 100vw;
     justify-content: center;
     text-align: center;
 
