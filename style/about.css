@@ -16,6 +16,7 @@ body .container .AboutInfo .contact a {
 }
 body .container .YearInfo {
   flex: 1;
+  padding-right: 3em;
 }
 body .container .YearInfo .list_year {
   display: flex;
@@ -33,6 +34,13 @@ body .container .YearInfo .list_year .li_2 .li_2-2 {
   border-top: 0.75px solid rgb(155, 155, 155);
   padding-top: 0.9em;
   margin-top: 0.9em;
+}
+body .container .YearInfo .list_year .li_2 .list-style li {
+  list-style-type: "-   ";
+  left: 2.2em;
+}
+body .container .YearInfo .list_year .WorkTitle {
+  font-family: "HALRepostItalic";
 }
 
 @media only screen and (max-width: 700px) {
