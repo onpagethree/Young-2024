@@ -1,8 +1,10 @@
 body .container {
   margin-bottom: 7rem;
+  display: flex;
 }
 body .container .AboutInfo {
-  margin-bottom: 3em;
+  width: 50%;
+  padding-right: 2.5vw;
 }
 body .container .AboutInfo .title {
   font-size: 3rem;
@@ -12,21 +14,25 @@ body .container .AboutInfo .title {
 body .container .AboutInfo .contact a {
   color: var(--gray);
 }
-body .list {
-  display: flex;
-  border-bottom: 0.75px solid black;
-  padding: 0.6em 0;
-}
-body .list #now {
-  color: red;
-  top: 0.12em;
-}
-body .list .li_1 {
-  width: 22vw;
-}
-body .list .li_2 {
-  line-height: 1.5em;
+body .container .YearInfo {
   flex: 1;
+}
+body .container .YearInfo .list_year {
+  display: flex;
+  border-top: 0.75px solid black;
+  padding: 0.9em 0;
+}
+body .container .YearInfo .list_year .li_1 {
+  width: 10vw;
+}
+body .container .YearInfo .list_year .li_2 {
+  flex: 1;
+  line-height: 1.5em;
+}
+body .container .YearInfo .list_year .li_2 .li_2-2 {
+  border-top: 0.75px solid rgb(155, 155, 155);
+  padding-top: 0.9em;
+  margin-top: 0.9em;
 }
 
 @media only screen and (max-width: 700px) {

@@ -9,9 +9,11 @@ $vh-space: 4vh;
 body {
   .container {
     margin-bottom: 7rem;
+    display: flex;
 
     .AboutInfo {
-      margin-bottom: 3em;
+      width: 50%;
+      padding-right: 2.5vw;
 
       .title {
         font-size: 3rem;
@@ -25,29 +27,35 @@ body {
         }
       }
     }
-  }
 
-  .list {
-    display: flex;
-    border-bottom: 0.75px solid black;
-    padding: 0.6em 0; // &:last-child {
-
-    //   border-bottom: none;
-    // }
-    #now {
-      color: red;
-      top: 0.12em;
-    }
-
-    .li_1 {
-      width: 22vw;
-    }
-
-    .li_2 {
-      line-height: 1.5em;
+    .YearInfo {
       flex: 1;
+
+      .list_year {
+        display: flex;
+        border-top: .75px solid black;
+        padding: .9em 0;
+
+
+        .li_1 {
+          width: 10vw;
+        }
+
+        .li_2 {
+          flex: 1;
+          line-height: 1.5em;
+
+          .li_2-2 {
+            border-top: 0.75px solid rgb(155, 155, 155);
+            padding-top: .9em;
+            margin-top: .9em;
+          }
+        }
+      }
     }
   }
+
+
 }
 
 @media only screen and (max-width: 700px) {
