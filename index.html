@@ -52,47 +52,49 @@
 
 
   <script>
-    document.addEventListener("click", function () {
+    // 1. 버튼 클릭 시에만 페이지 이동하도록 처리 (전역 클릭 이벤트 제거)
+    const button = document.querySelector(".btncentre button");
+    button.addEventListener("click", function () {
       window.location.href = "./work-all.html";
     });
 
-
-    // 5가지 색상 배열
+    // 2. 5가지 색상 배열
     const colors = [
-      "#dcc3ff", // 예: 연한 보라
-      "#77dd77", // 예: 연한 초록
-      "#fdfd96", // 예: 연한 노랑
-      "#84b6f4", // 예: 연한 파랑
-      "#fdcae1"  // 예: 연한 핑크
+      "#dcc3ff", // 연한 보라
+      "#77dd77", // 연한 초록
+      "#fdfd96", // 연한 노랑
+      "#84b6f4", // 연한 파랑
+      "#fdcae1"  // 연한 핑크
     ];
-
-    // 버튼 요소 가져오기
-    const button = document.querySelector(".btncentre button");
 
     // hover 시 적용된 색을 저장할 변수
     let lastRandomColor = "";
+    const textInput = document.getElementById("textInput");
 
-    // (1) 마우스가 올라갈 때 (hover 시작)
-    button.addEventListener("mouseenter", () => {
-      // 무작위 색상 선택
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
-      // 버튼 배경 적용
-      button.style.backgroundColor = randomColor;
-      // 전역 변수에 저장
-      lastRandomColor = randomColor;
-    });
-
-    // (2) 마우스가 나갈 때 (hover 해제)
-    button.addEventListener("mouseleave", () => {
-      // 1) 버튼 배경은 원래 색으로 되돌리고 싶으면:
-      button.style.backgroundColor = "var(--lightgray)";
-
-      // 2) HTML 배경(또는 body 배경) 바꾸기
-      // document.documentElement.style.backgroundColor = lastRandomColor; 
-      // => html 태그 배경색
-      // 혹은 body 배경색:
-      document.body.style.backgroundColor = lastRandomColor;
-    });
+    // 3. 모바일/데스크탑 분기 처리
+    if (window.innerWidth <= 700) {
+      // Mobile: 텍스트 입력이 포커스 될 때 버튼 색상 변경
+      textInput.addEventListener("focus", () => {
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        button.style.backgroundColor = randomColor;
+        lastRandomColor = randomColor;
+      });
+      textInput.addEventListener("blur", () => {
+        button.style.backgroundColor = "var(--lightgray)";
+        document.body.style.backgroundColor = lastRandomColor;
+      });
+    } else {
+      // Desktop: 버튼 hover 이벤트 사용
+      button.addEventListener("mouseenter", () => {
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        button.style.backgroundColor = randomColor;
+        lastRandomColor = randomColor;
+      });
+      button.addEventListener("mouseleave", () => {
+        button.style.backgroundColor = "var(--lightgray)";
+        document.body.style.backgroundColor = lastRandomColor;
+      });
+    }
   </script>
 </body>
 
