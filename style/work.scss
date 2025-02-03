@@ -63,8 +63,8 @@ body {
           /* 이미지 정 사이즈 */
           object-fit: cover;
           transition: transform 0.2s linear; // 스케일 변화에 부드러운 트랜지션 추가
-
         }
+
 
         // 텍스트 컨테이너를 절대 위치로 배치
         .text-container {
@@ -83,6 +83,14 @@ body {
           display: none; // 기본적으로 숨김
           z-index: 1; // 텍스트가 이미지 위에 표시되도록 함
           transition: opacity 0.2s linear; // 텍스트의 트랜지션 추가
+
+          #continued {
+            position: absolute;
+            bottom: 1em;
+
+            font-size: .6em;
+            color: var(--gray);
+          }
 
           #award {
             position: absolute;
@@ -126,7 +134,7 @@ body {
 
     /* 바디  바디  바디 mobile */
     .container {
-      gap: 0vw; // 요소 사이의 간격을 설정
+      gap: .5em; // 요소 사이의 간격을 설정
 
       .box {
         width: 100%;
@@ -134,19 +142,19 @@ body {
         .thumbnail-box {
           height: 19.25rem;
           flex-direction: column;
-          // margin-bottom: 1em; // 이미지와 텍스트 사이에 간격 추가
 
           .text-container {
             position: relative; // 절대 위치 제거
             top: auto; // 기존 top 속성 제거
             left: auto; // 기존 left 속성 제거
-            font-size: 1em;
+            display: flex;
+            justify-content: center; // 가로 중앙 정렬
+            align-items: center; // 세로 중앙 정렬
 
             padding: .85em 2em 2em; // 텍스트 상하 간격 조정
-
-            display: block;
             height: auto;
 
+            font-size: 1em;
             background-color: unset !important;
 
             #award {

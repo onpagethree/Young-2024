@@ -63,6 +63,12 @@ body .container .box .thumbnail-box .text-container {
   z-index: 1;
   transition: opacity 0.2s linear;
 }
+body .container .box .thumbnail-box .text-container #continued {
+  position: absolute;
+  bottom: 1em;
+  font-size: 0.6em;
+  color: var(--gray);
+}
 body .container .box .thumbnail-box .text-container #award {
   position: absolute;
   top: 0.48em;
@@ -94,7 +100,7 @@ body .container .box .thumbnail-box:hover .text-container {
     margin-right: 0.8em;
   }
   body .container {
-    gap: 0vw;
+    gap: 0.5em;
   }
   body .container .box {
     width: 100%;
@@ -107,10 +113,12 @@ body .container .box .thumbnail-box:hover .text-container {
     position: relative;
     top: auto;
     left: auto;
-    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.85em 2em 2em;
-    display: block;
     height: auto;
+    font-size: 1em;
     background-color: unset !important;
   }
   body .container .box .thumbnail-box .text-container #award {
