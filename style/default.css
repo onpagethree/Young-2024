@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap");
 :root {
   --lightgray: rgb(245, 245, 245);
   --gray: rgb(200, 200, 200);
@@ -24,16 +25,7 @@
   src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
   font-weight: 800;
 }
-@font-face {
-  font-family: "HALRepost";
-  src: url(../source_default/HALRepost/HALRepostTest-Regular.otf);
-  font-weight: 500;
-}
-@font-face {
-  font-family: "HALRepostItalic";
-  src: url(../source_default/HALRepost/HALRepostTest-Italic.otf);
-  font-weight: 500;
-}
+/* 영문 폰트 "barlow" */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -41,7 +33,7 @@
   list-style: none;
   text-decoration: none;
   position: relative;
-  font-family: "HALRepost", "gothica1", sans-serif;
+  font-family: "Barlow", "gothica1", sans-serif;
   font-weight: 500;
   word-break: keep-all;
 }
@@ -75,18 +67,19 @@ html {
 }
 
 body {
-  padding: 0 2.5vw 0 2.5vw;
+  padding: 0 1.2vw 0 1.2vw;
   /* FOOTER 하단바 웹사이즈 */
 }
 body header {
-  margin: 3vh 0 7rem 0;
+  margin: 2vh 0 10vh 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   z-index: 100;
 }
 body header .header_name {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
+  letter-spacing: -0.03em;
   position: fixed;
   z-index: 1000;
   mix-blend-mode: overlay;
@@ -96,12 +89,13 @@ body header .header_name:hover {
   color: var(--blue);
 }
 body header .header_menu {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
+  letter-spacing: -0.03em;
   position: absolute;
   right: 0.25rem;
 }
 body header #menu {
-  margin-left: 2vw;
+  margin-left: 3vw;
   color: rgb(0, 0, 0);
 }
 body header #menu:hover {
@@ -118,8 +112,8 @@ body .container > *.show {
   transform: translateY(0);
 }
 body footer {
-  padding-top: 2vh;
-  padding-bottom: 4vh;
+  padding-top: 1.5vh;
+  padding-bottom: 3vh;
   font-size: 0.85rem;
   justify-content: center;
   text-align: center;
@@ -138,7 +132,7 @@ body footer #underline {
     line-height: 1.45em;
   }
   html body {
-    padding: 0 2.5vw 0 2.5vw;
+    padding: 0 1.2vw 0 1.2vw;
     /* FOOTER 하단바 모바일사이즈 */
   }
   html body header {
@@ -157,7 +151,7 @@ body footer #underline {
   }
   html body footer {
     font-size: 0.6rem;
-    padding-bottom: 1.6vh;
+    padding-bottom: 1.2vh;
   }
   html body footer #underline {
     margin-top: -2vw;

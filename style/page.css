@@ -26,8 +26,8 @@ body .container {
   /* Lightbox container */
 }
 body .container .project-info {
-  margin-top: 5vh;
-  margin-bottom: 8vh;
+  margin-top: 3.75vh;
+  margin-bottom: 6vh;
   display: flex;
 }
 body .container .project-info .info_left {
@@ -108,8 +108,8 @@ body .container .mid_text a:hover {
   opacity: 0.5;
 }
 body .container .mid_text_double {
-  margin-top: 5vh;
-  margin-bottom: 8vh;
+  margin-top: 3.75vh;
+  margin-bottom: 6vh;
   display: flex;
 }
 body .container .mid_text_double a:hover {
@@ -203,8 +203,8 @@ body .container .lightbox .lightbox-center .lightbox-content {
     /*세로이미지*/
   }
   body .container .project-info {
-    margin-top: 4vh;
-    margin-bottom: 6vh;
+    margin-top: 3vh;
+    margin-bottom: 4.5vh;
     flex-direction: column;
   }
   body .container .project-info .info_left {
@@ -212,14 +212,14 @@ body .container .lightbox .lightbox-center .lightbox-content {
   }
   body .container .project-info .info_left .title {
     font-size: 1.75rem;
-    margin-bottom: 3vh;
+    margin-bottom: 2.25vh;
   }
   body .container .project-info .info_right {
     padding-right: 0vw;
     /* 프로젝트 크레딧 모바일*/
   }
   body .container .project-info .info_right .caption {
-    margin-bottom: 4vh;
+    margin-bottom: 3vh;
     padding-right: 0;
   }
   body .container .project-info .info_right #awardPage {
@@ -227,7 +227,7 @@ body .container .lightbox .lightbox-center .lightbox-content {
     margin: 2.5em 0 2.7em;
   }
   body .container .project-info .info_right .info-page {
-    margin-bottom: 3vh;
+    margin-bottom: 2.25vh;
     font-size: 0.94rem;
   }
   body .container .project-info .info_right .credit_box {
@@ -242,8 +242,8 @@ body .container .lightbox .lightbox-center .lightbox-content {
     padding: 3.5vw 2.5vw 6vw 2.5vw;
   }
   body .container .mid_text_double {
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-top: 2.25vh;
+    margin-bottom: 2.25vh;
     flex-direction: column;
   }
   body .container .mid_text_double .text_left {
@@ -251,7 +251,7 @@ body .container .lightbox .lightbox-center .lightbox-content {
     padding-right: 5vw;
   }
   body .container .mid_text_double .text_right {
-    margin-top: 4vh;
+    margin-top: 3vh;
   }
   body .container img {
     margin-bottom: 1.25vh;

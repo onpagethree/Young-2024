@@ -1,7 +1,7 @@
 // 단축어 설정
 :root {
-  --lightgray: rgb(245, 245, 245);
-  --gray: rgb(200, 200, 200);
+	--lightgray: rgb(245, 245, 245);
+	--gray: rgb(200, 200, 200);
 }
 
 $default-f: 0.88vw;
@@ -9,212 +9,204 @@ $mobile-f: 3.9vw;
 // line height
 $lh: 1.45em;
 $titlelh: 1.25em;
-$padding: 0 2.5vw 0 2.5vw;
-$vh-space: 4vh;
+$padding: 0 1.2vw 0 1.2vw;
+$vh-space: 3vh;
 
 #underline {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* 한글 폰트 */
 @font-face {
-  font-family: "gothica1";
-  src: url(../source_default/Gothica1/GothicA1-Medium.ttf);
-  font-weight: 500;
+	font-family: "gothica1";
+	src: url(../source_default/Gothica1/GothicA1-Medium.ttf);
+	font-weight: 500;
 }
 
 @font-face {
-  font-family: "gothica1";
-  src: url(../source_default/Gothica1/GothicA1-SemiBold.ttf);
-  font-weight: 600;
+	font-family: "gothica1";
+	src: url(../source_default/Gothica1/GothicA1-SemiBold.ttf);
+	font-weight: 600;
 }
 
 @font-face {
-  font-family: "gothica1";
-  src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
-  font-weight: 800;
+	font-family: "gothica1";
+	src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
+	font-weight: 800;
 }
 
-@font-face {
-  font-family: "HALRepost";
-  src: url(../source_default/HALRepost/HALRepostTest-Regular.otf);
-  font-weight: 500;
-}
+// 영문폰트
+// @import url("https://use.typekit.net/iqk7gyb.css");
 
-@font-face {
-  font-family: "HALRepostItalic";
-  src: url(../source_default/HALRepost/HALRepostTest-Italic.otf);
-  font-weight: 500;
-}
-
-// /* 영문 폰트 "barlow" */
-// @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+/* 영문 폰트 "barlow" */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap");
 
 // .barlow-regular {
-//   font-family: "Barlow", sans-serif;
-//   font-weight: 100-900;
-//   font-style: normal, italic;
+// 	font-family: "Barlow", sans-serif;
+// 	font-weight: 100-900;
+// 	font-style: normal, italic;
 // }
-
 
 // 기본 설정
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 
-  list-style: none;
-  text-decoration: none;
+	list-style: none;
+	text-decoration: none;
 
-  position: relative;
+	position: relative;
 
-  font-family: "HALRepost", "gothica1", sans-serif;
-  font-weight: 500;
-  word-break: keep-all;
+	font-family: "Barlow", "gothica1", sans-serif;
+	font-weight: 500;
+	word-break: keep-all;
 }
 
 a,
 a:link,
 a:visited {
-  text-decoration: none;
-  color: inherit;
-  // 부모요소의 컬러 물려받기.
+	text-decoration: none;
+	color: inherit;
+	// 부모요소의 컬러 물려받기.
 }
 
 // 드래그 시 컬러 변경
 ::selection {
-  background-color: var(--point);
-  color: rgb(0, 0, 0);
+	background-color: var(--point);
+	color: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 img {
-  display: block;
-  margin: 0;
-  width: 100%;
-  height: auto;
+	display: block;
+	margin: 0;
+	width: 100%;
+	height: auto;
 }
 
 html {
-  font-size: $default-f;
-  line-height: $lh;
+	font-size: $default-f;
+	line-height: $lh;
 }
 
 body {
-  padding: $padding;
+	padding: $padding;
 
+	// HEADER 헤더
+	header {
+		margin: 2vh 0 10vh 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		z-index: 100;
 
-  // HEADER 헤더
-  header {
-    margin: 3vh 0 7rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    z-index: 100;
+		//  HEADER 헤더 제목
+		.header_name {
+			font-size: 2.4rem;
+			letter-spacing: -0.03em;
 
-    //  HEADER 헤더 제목
-    .header_name {
-      font-size: 1.5rem;
+			position: fixed;
+			z-index: 1000;
+			mix-blend-mode: overlay;
+			/* Multiply 효과 적용 */
+		}
 
-      position: fixed;
-      z-index: 1000;
-      mix-blend-mode: overlay;
-      /* Multiply 효과 적용 */
-    }
+		.header_name:hover {
+			color: var(--blue);
+		}
 
-    .header_name:hover {
-      color: var(--blue);
-    }
+		.header_menu {
+			font-size: 2.4rem;
+			letter-spacing: -0.03em;
 
-    .header_menu {
-      font-size: 1.5rem;
-      position: absolute;
-      right: 0.25rem;
-    }
+			position: absolute;
+			right: 0.25rem;
+		}
 
-    #menu {
-      margin-left: 2vw;
-      color: rgb(0, 0, 0, 1);
-    }
+		#menu {
+			margin-left: 3vw;
+			color: rgb(0, 0, 0, 1);
+		}
 
-    #menu:hover {
-      color: rgba(0, 0, 0, 0.45);
+		#menu:hover {
+			color: rgba(0, 0, 0, 0.45);
 
-      transition: all 0.2s ease-in;
-    }
-  }
+			transition: all 0.2s ease-in;
+		}
+	}
 
-  .container {
-    &>* {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+	.container {
+		& > * {
+			opacity: 0;
+			transform: translateY(50px);
+			transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 
-      &.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  }
+			&.show {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
 
-  /* FOOTER 하단바 웹사이즈 */
-  footer {
-    padding-top: calc($vh-space / 2);
-    padding-bottom: $vh-space;
+	/* FOOTER 하단바 웹사이즈 */
+	footer {
+		padding-top: calc($vh-space / 2);
+		padding-bottom: $vh-space;
 
-    font-size: .85rem;
-    justify-content: center;
-    text-align: center;
+		font-size: 0.85rem;
+		justify-content: center;
+		text-align: center;
 
-    #underline {
-      display: flex;
-      justify-content: center;
-      gap: .2vw;
-      margin-top: -.2vw;
-    }
-  }
+		#underline {
+			display: flex;
+			justify-content: center;
+			gap: 0.2vw;
+			margin-top: -0.2vw;
+		}
+	}
 }
 
 /* 모바일사이즈  모바일사이즈  모바일사이즈 모바일사이즈  모바일사이즈  모바일사이즈 */
 @media only screen and (max-width: 700px) {
-  html {
-    font-size: $mobile-f;
-    line-height: $lh;
+	html {
+		font-size: $mobile-f;
+		line-height: $lh;
 
-    body {
-      padding: $padding;
+		body {
+			padding: $padding;
 
-      header {
-        margin: 2vh 0 4rem 0;
+			header {
+				margin: 2vh 0 4rem 0;
 
-        .header_name {
-          font-size: 1.2rem;
-          position: relative;
-        }
+				.header_name {
+					font-size: 1.2rem;
+					position: relative;
+				}
 
-        /*HEADER 헤더 모바일사이즈*/
-        .header_menu {
-          font-size: 1.2rem;
-        }
+				/*HEADER 헤더 모바일사이즈*/
+				.header_menu {
+					font-size: 1.2rem;
+				}
 
-        #menu {
-          margin-left: 0.7em;
-        }
-      }
+				#menu {
+					margin-left: 0.7em;
+				}
+			}
 
-      /* FOOTER 하단바 모바일사이즈 */
-      footer {
-        font-size: 0.6rem;
-        padding-bottom: calc($vh-space / 2.5);
+			/* FOOTER 하단바 모바일사이즈 */
+			footer {
+				font-size: 0.6rem;
+				padding-bottom: calc($vh-space / 2.5);
 
-        #underline {
-          margin-top: -2vw;
-        }
-      }
-    }
-  }
+				#underline {
+					margin-top: -2vw;
+				}
+			}
+		}
+	}
 }

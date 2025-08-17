@@ -38,11 +38,11 @@
     </span>
   </div>
 
-  <div class="btncentre"> <button></button>
+  <!-- <div class="btncentre"> <button></button> -->
   </div>
 
   <footer>
-    © Younghyun Song. 2025
+    © YounghyunSong. 2025
     <br>
     <span id="underline">
       <a href="mailto:" yhyun4156@gmail.com>mail.</a><br>
@@ -51,51 +51,76 @@
   </footer>
 
 
-  <script>
-    // 1. 버튼 클릭 시에만 페이지 이동하도록 처리 (전역 클릭 이벤트 제거)
-    const button = document.querySelector(".btncentre button");
-    button.addEventListener("click", function () {
-      window.location.href = "./work-all.html";
-    });
+<script>
+  const colors = [
+    "#dcc3ff", // 연한 보라
+    "#77dd77", // 연한 초록
+    "#fdfd96", // 연한 노랑
+    "#84b6f4", // 연한 파랑
+    "#fdcae1"  // 연한 핑크
+  ];
 
-    // 2. 5가지 색상 배열
-    const colors = [
-      "#dcc3ff", // 연한 보라
-      "#77dd77", // 연한 초록
-      "#fdfd96", // 연한 노랑
-      "#84b6f4", // 연한 파랑
-      "#fdcae1"  // 연한 핑크
-    ];
+  const textInput = document.getElementById("textInput");
+  let moveCount = 0;
+  let lastMoveTime = 0;
 
-    // hover 시 적용된 색을 저장할 변수
-    let lastRandomColor = "";
-    const textInput = document.getElementById("textInput");
+  function splitBackground() {
+    moveCount++;
+    if (moveCount > 10) moveCount = 0; // 2^10 = 1024까지 허용
 
-    // 3. 모바일/데스크탑 분기 처리
-    if (window.innerWidth <= 700) {
-      // Mobile: 텍스트 입력이 포커스 될 때 버튼 색상 변경
-      textInput.addEventListener("focus", () => {
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        button.style.backgroundColor = randomColor;
-        lastRandomColor = randomColor;
-      });
-      textInput.addEventListener("blur", () => {
-        button.style.backgroundColor = "var(--lightgray)";
-        document.body.style.backgroundColor = lastRandomColor;
-      });
-    } else {
-      // Desktop: 버튼 hover 이벤트 사용
-      button.addEventListener("mouseenter", () => {
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        button.style.backgroundColor = randomColor;
-        lastRandomColor = randomColor;
-      });
-      button.addEventListener("mouseleave", () => {
-        button.style.backgroundColor = "var(--lightgray)";
-        document.body.style.backgroundColor = lastRandomColor;
-      });
+    const total = Math.pow(2, moveCount);
+    const paneWidth = 100 / total;
+
+    // 기존 패널 제거
+    document.querySelectorAll(".pane").forEach(pane => pane.remove());
+
+    // 새 패널 생성
+    for (let i = 0; i < total; i++) {
+      const pane = document.createElement("div");
+      pane.classList.add("pane");
+      pane.style.position = "fixed"; // 전체 화면 채움
+      pane.style.top = "0";
+      pane.style.left = `${paneWidth * i}vw`;
+      pane.style.width = `${paneWidth}vw`;
+      pane.style.height = "100%"; // vh → %
+      pane.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      pane.style.zIndex = "-1";
+      document.body.appendChild(pane);
     }
-  </script>
+  }
+
+  function handleTrigger(e) {
+    if (textInput.contains(e.target)) return;
+
+    const now = Date.now();
+    if (now - lastMoveTime < 300) return; // debounce
+    lastMoveTime = now;
+
+    splitBackground();
+  }
+
+  // 마우스 움직임 (PC)
+  document.addEventListener("mousemove", handleTrigger);
+
+  // 터치 시작 (Mobile)
+  document.addEventListener("touchstart", handleTrigger);
+
+  // 모바일에서 입력창 포커스 시 배경색 유지
+  let lastRandomColor = "";
+  if (window.innerWidth <= 700) {
+    textInput.addEventListener("focus", () => {
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      lastRandomColor = randomColor;
+    });
+    textInput.addEventListener("blur", () => {
+      document.body.style.backgroundColor = lastRandomColor;
+    });
+  }
+</script>
+
+
+
+
 </body>
 
 </html>
