@@ -4,11 +4,11 @@
 	--gray: rgb(200, 200, 200);
 }
 
-$default-f: 0.88vw;
+$default-f: 1.1vw;
 $mobile-f: 3.9vw;
 // line height
 $lh: 1.45em;
-$titlelh: 1.25em;
+$titlelh: 1.2em;
 $padding: 0 1.2vw 0 1.2vw;
 $vh-space: 3vh;
 
@@ -19,20 +19,30 @@ $vh-space: 3vh;
 /* 한글 폰트 */
 @font-face {
 	font-family: "gothica1";
+	src: url(../source_default/Gothica1/GothicA1-Light.ttf);
+	font-weight: 300;
+	size-adjust: 94%;
+}
+
+@font-face {
+	font-family: "gothica1";
 	src: url(../source_default/Gothica1/GothicA1-Medium.ttf);
 	font-weight: 500;
+	size-adjust: 94%;
 }
 
 @font-face {
 	font-family: "gothica1";
 	src: url(../source_default/Gothica1/GothicA1-SemiBold.ttf);
 	font-weight: 600;
+	size-adjust: 94%;
 }
 
 @font-face {
 	font-family: "gothica1";
 	src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
 	font-weight: 800;
+	size-adjust: 94%;
 }
 
 // 영문폰트
@@ -107,7 +117,7 @@ body {
 
 		//  HEADER 헤더 제목
 		.header_name {
-			font-size: 2.4rem;
+			font-size: 2.2rem;
 			letter-spacing: -0.03em;
 
 			position: fixed;
@@ -121,7 +131,7 @@ body {
 		}
 
 		.header_menu {
-			font-size: 2.4rem;
+			font-size: 2.2rem;
 			letter-spacing: -0.03em;
 
 			position: absolute;

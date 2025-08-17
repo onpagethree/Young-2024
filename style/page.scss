@@ -1,344 +1,342 @@
-$default-f: 0.9vw;
+$default-f: 1.1vw;
 $mobile-f: 3.9vw;
 // line height
-$lh: 1.55em;
-$titlelh: 1.25em;
-$padding: 0 2.5vw 0 2.5vw;
-$vh-space: 4vh;
+$lh: 1.45em;
+$titlelh: 1.2em;
+$padding: 0 1.2vw 0 1.2vw;
+$vh-space: 3vh;
 
 #underline {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* 바디 내용 시작 */
 body {
-  cursor: default;
+	cursor: default;
 
-  /* 라이트박스 열릴 때 커서 변경 */
-  &.lightbox-open {
-    cursor: pointer;
-  }
+	/* 라이트박스 열릴 때 커서 변경 */
+	&.lightbox-open {
+		cursor: pointer;
+	}
 
-  &.no-scroll {
-    overflow: hidden;
-  }
+	&.no-scroll {
+		overflow: hidden;
+	}
 
-  .container {
-    margin-bottom: 7rem;
+	.container {
+		margin-bottom: 7rem;
 
-    /* 프로젝트 설명 */
-    .project-info {
-      margin-top: calc($vh-space * 1.25);
-      margin-bottom: calc($vh-space * 2);
+		/* 프로젝트 설명 */
+		.project-info {
+			margin-top: calc($vh-space * 1.25);
+			margin-bottom: calc($vh-space * 2);
 
-      display: flex;
+			display: flex;
 
-      .info_left {
-        width: 50%;
-        padding-right: 5vw;
+			.info_left {
+				width: 50%;
+				padding-right: 5vw;
 
-        .title {
-          font-size: 3rem;
-          letter-spacing: -0.01em;
-          line-height: $titlelh;
-        }
-      }
+				.title {
+					font-size: 3rem;
+					letter-spacing: -0.01em;
+					line-height: $titlelh;
+				}
+			}
 
-      .info_right {
-        flex: 1;
-        padding-right: 5vw;
+			.info_right {
+				flex: 1;
+				padding-right: 5vw;
 
-        line-height: $lh;
+				line-height: $lh;
 
-        .caption {
-          font-size: 1rem;
-          padding-right: 4em;
-          margin-bottom: 1.5em;
+				.caption {
+					font-size: 1rem;
+					padding-right: 4em;
+					margin-bottom: 1.5em;
 
-          .more-text {
-            display: none;
-            transition: all 0.3s ease-in-out;
-          }
-        }
+					.more-text {
+						display: none;
+						transition: all 0.3s ease-in-out;
+					}
+				}
 
-        #toggle-button {
-          background: none;
-          /* 배경 제거 */
-          border: none;
-          /* 테두리 제거 */
-          cursor: pointer;
-          /* 마우스 포인터를 가리키는 손 모양으로 변경 */
-          color: black;
-          font-size: .95em;
-          text-decoration: underline;
-          /* 밑줄 추가 */
-          margin-bottom: 1.5em;
+				#toggle-button {
+					background: none;
+					/* 배경 제거 */
+					border: none;
+					/* 테두리 제거 */
+					cursor: pointer;
+					/* 마우스 포인터를 가리키는 손 모양으로 변경 */
+					color: black;
+					font-size: 0.95em;
+					text-decoration: underline;
+					/* 밑줄 추가 */
+					margin-bottom: 1.5em;
 
-          &:hover {
-            opacity: 0.5;
-          }
-        }
+					&:hover {
+						opacity: 0.5;
+					}
+				}
 
-        #awardPage {
-          width: 15em;
-          margin: 1.25em 0 2.7em;
-        }
+				#awardPage {
+					width: 15em;
+					margin: 1.25em 0 2.7em;
+				}
 
-        /* 연결 페이지가 있는 경우 */
-        .info-page {
-          color: gray;
-          margin-bottom: 1.5em;
-          font-size: 1.05rem;
-          line-height: $lh;
+				/* 연결 페이지가 있는 경우 */
+				.info-page {
+					color: gray;
+					margin-bottom: 1.5em;
+					font-size: 1.05rem;
+					line-height: $lh;
 
-          a:hover {
-            opacity: 0.5;
-          }
-        }
+					a:hover {
+						opacity: 0.5;
+					}
+				}
 
-        /* 크레딧 */
-        .credit_box {
-          display: flex;
+				/* 크레딧 */
+				.credit_box {
+					display: flex;
 
-          border-top: 1px solid black;
-          margin-top: 0.4em;
-          padding-top: 0.4em;
+					border-top: 1px solid black;
+					margin-top: 0.4em;
+					padding-top: 0.4em;
 
-          font-size: 1.05rem;
-          line-height: $lh;
+					font-size: 1.05rem;
+					line-height: $lh;
 
-          .credit_1 {
-            width: 30%;
-          }
+					.credit_1 {
+						width: 30%;
+					}
 
-          .credit_2 {
-            flex: 1;
-          }
-        }
-      }
-    }
+					.credit_2 {
+						flex: 1;
+					}
+				}
+			}
+		}
 
+		/*프로젝트 중간글*/
+		.mid_text {
+			color: black;
+			text-align: center;
+			padding: 3.5vh 0 6vh 0;
 
-    /*프로젝트 중간글*/
-    .mid_text {
-      color: black;
-      text-align: center;
-      padding: 3.5vh 0 6vh 0;
+			font-size: calc($default-f * 0.85);
 
-      font-size: calc($default-f * 0.85);
+			a:hover {
+				opacity: 0.5;
+			}
+		}
 
-      a:hover {
-        opacity: 0.5;
-      }
-    }
+		/* 프로젝트 중간글 더블더블 */
+		.mid_text_double {
+			margin-top: calc($vh-space * 1.25);
+			margin-bottom: calc($vh-space * 2);
+			display: flex;
 
-    /* 프로젝트 중간글 더블더블 */
-    .mid_text_double {
-      margin-top: calc($vh-space * 1.25);
-      margin-bottom: calc($vh-space * 2);
-      display: flex;
+			a:hover {
+				opacity: 0.5;
+			}
 
-      a:hover {
-        opacity: 0.5;
-      }
+			.text_left {
+				width: 50%;
+				padding-right: 5vw;
+			}
 
-      .text_left {
-        width: 50%;
-        padding-right: 5vw;
-      }
+			.text_right {
+				flex: 1;
+				/* 줄글 조정하기 */
+				padding-right: 5vw;
+			}
+		}
 
-      .text_right {
-        flex: 1;
-        /* 줄글 조정하기 */
-        padding-right: 5vw;
-      }
-    }
+		/*IMG IMG 이미지 설정*/
 
-    /*IMG IMG 이미지 설정*/
+		img {
+			max-width: 100%;
+			height: auto;
 
-    img {
-      max-width: 100%;
-      height: auto;
+			margin-bottom: 3vh;
+		}
 
-      margin-bottom: 3vh;
-    }
+		/* 이미지가 화면을 꽉 채우게 하기 위한 스타일 */
+		.full-width-img {
+			width: 100vw;
+			max-width: 100vw;
+			height: auto;
+			/* 뷰포트 전체 너비로 설정 */
+			margin-left: -2.5vw;
+			margin-right: -2.5vw;
+		}
 
+		/*세로이미지*/
+		.img-vertical {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-    /* 이미지가 화면을 꽉 채우게 하기 위한 스타일 */
-    .full-width-img {
-      width: 100vw;
-      max-width: 100vw;
-      height: auto;
-      /* 뷰포트 전체 너비로 설정 */
-      margin-left: -2.5vw;
-      margin-right: -2.5vw;
-    }
+			margin-bottom: 3vh;
+		}
 
-    /*세로이미지*/
-    .img-vertical {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+		.img-vertical > img {
+			width: 50%;
+			margin: 0;
+		}
 
-      margin-bottom: 3vh;
-    }
+		/* 유튜브 링크 */
+		.youtube {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow-y: hidden;
 
-    .img-vertical>img {
-      width: 50%;
-      margin: 0;
-    }
+			margin-bottom: 3vh;
 
-    /* 유튜브 링크 */
-    .youtube {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow-y: hidden;
+			iframe,
+			object,
+			embed {
+				position: absolute;
+				top: 0;
+				left: 0;
+				word-wrap: 100%;
+				height: 100%;
+			}
+		}
 
-      margin-bottom: 3vh;
+		/* Lightbox container */
+		.lightbox {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.8);
+			display: none;
+			/* 수정된 부분 */
+			z-index: 1000;
 
-      iframe,
-      object,
-      embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        word-wrap: 100%;
-        height: 100%;
-      }
-    }
+			.lightbox-center {
+				width: 100%;
+				height: 100%;
 
-    /* Lightbox container */
-    .lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      display: none;
-      /* 수정된 부분 */
-      z-index: 1000;
+				display: flex;
+				/* 수정된 부분 */
+				justify-content: center;
+				/* 수정된 부분 */
+				align-items: center;
+				/* 수정된 부분 */
 
-      .lightbox-center {
-        width: 100%;
-        height: 100%;
-
-        display: flex;
-        /* 수정된 부분 */
-        justify-content: center;
-        /* 수정된 부분 */
-        align-items: center;
-        /* 수정된 부분 */
-
-        /* Lightbox image */
-        .lightbox-content {
-          width: auto;
-          max-height: 90%;
-          display: block;
-          margin: auto;
-        }
-      }
-    }
-  }
+				/* Lightbox image */
+				.lightbox-content {
+					width: auto;
+					max-height: 90%;
+					display: block;
+					margin: auto;
+				}
+			}
+		}
+	}
 }
 
 // 모바일 사이즈 모바일 사이즈 모바일 사이즈
 
 @media only screen and (max-width: 700px) {
-  body {
-    .container {
-      margin-top: 5.5rem;
-      font-size: .9rem;
+	body {
+		.container {
+			margin-top: 5.5rem;
+			font-size: 0.9rem;
 
-      /* 프로젝트 설명 모바일사이즈 */
-      .project-info {
-        margin-top: $vh-space;
-        margin-bottom: calc($vh-space * 1.5);
+			/* 프로젝트 설명 모바일사이즈 */
+			.project-info {
+				margin-top: $vh-space;
+				margin-bottom: calc($vh-space * 1.5);
 
-        flex-direction: column;
+				flex-direction: column;
 
-        .info_left {
-          width: 90vw;
+				.info_left {
+					width: 90vw;
 
-          .title {
-            font-size: 1.75rem;
-            margin-bottom: calc($vh-space * 0.75);
-          }
-        }
+					.title {
+						font-size: 1.75rem;
+						margin-bottom: calc($vh-space * 0.75);
+					}
+				}
 
-        .info_right {
-          padding-right: 0vw;
+				.info_right {
+					padding-right: 0vw;
 
-          .caption {
-            margin-bottom: calc($vh-space * 1);
-            padding-right: 0;
-          }
+					.caption {
+						margin-bottom: calc($vh-space * 1);
+						padding-right: 0;
+					}
 
-          #awardPage {
-            width: 12em;
-            margin: 2.5em 0 2.7em;
-          }
+					#awardPage {
+						width: 12em;
+						margin: 2.5em 0 2.7em;
+					}
 
-          .info-page {
-            margin-bottom: calc($vh-space * 0.75);
-            font-size: .94rem;
-          }
+					.info-page {
+						margin-bottom: calc($vh-space * 0.75);
+						font-size: 0.94rem;
+					}
 
-          /* 프로젝트 크레딧 모바일*/
-          .credit_box {
-            width: 98%;
-            font-size: .94rem;
-          }
+					/* 프로젝트 크레딧 모바일*/
+					.credit_box {
+						width: 98%;
+						font-size: 0.94rem;
+					}
 
-          .credit_1 {
-            width: 23%;
-          }
-        }
-      }
+					.credit_1 {
+						width: 23%;
+					}
+				}
+			}
 
-      /*IMG IMG 중간 글 모바일*/
-      .mid_text {
-        font-size: .9rem;
+			/*IMG IMG 중간 글 모바일*/
+			.mid_text {
+				font-size: 0.9rem;
 
-        padding: 3.5vw 2.5vw 6vw 2.5vw;
-      }
+				padding: 3.5vw 2.5vw 6vw 2.5vw;
+			}
 
-      /* 프로젝트 중간글 더블더블 모바일 */
-      .mid_text_double {
-        margin-top: calc($vh-space * 0.75);
-        margin-bottom: calc($vh-space * 0.75);
+			/* 프로젝트 중간글 더블더블 모바일 */
+			.mid_text_double {
+				margin-top: calc($vh-space * 0.75);
+				margin-bottom: calc($vh-space * 0.75);
 
-        flex-direction: column;
+				flex-direction: column;
 
-        .text_left {
-          width: 100%;
-          padding-right: 5vw;
-        }
+				.text_left {
+					width: 100%;
+					padding-right: 5vw;
+				}
 
-        .text_right {
-          margin-top: calc($vh-space * 1);
-        }
-      }
+				.text_right {
+					margin-top: calc($vh-space * 1);
+				}
+			}
 
-      /*IMG IMG 이미지 설정 모바일*/
-      img {
-        margin-bottom: 1.25vh;
-      }
+			/*IMG IMG 이미지 설정 모바일*/
+			img {
+				margin-bottom: 1.25vh;
+			}
 
-      /*세로이미지*/
-      .img-vertical {
-        margin-bottom: 1.25vh;
+			/*세로이미지*/
+			.img-vertical {
+				margin-bottom: 1.25vh;
 
-        img {
-          width: 100%;
-          margin: 0;
-        }
-      }
+				img {
+					width: 100%;
+					margin: 0;
+				}
+			}
 
-      .youtube {
-        margin-bottom: 1.25vh;
-      }
-    }
-  }
+			.youtube {
+				margin-bottom: 1.25vh;
+			}
+		}
+	}
 }

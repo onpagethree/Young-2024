@@ -1,118 +1,111 @@
 <!DOCTYPE html>
 <html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="x-UA-compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-SCALE=1.0" />
+		<title>YOUNG2024</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="x-UA-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-SCALE=1.0">
-  <TITLE>YOUNG2024</TITLE>
+		<link rel="STYLESHEET" href="./style/GALLERY/GALLERY.CSS" />
+		<!-- 슬라이드갤러리 -->
+		<link rel="stylesheet" href="./style/gallery/00_flickity.css" />
+		<script src="./style/gallery/00_flickity.pkgd.js" async></script>
 
+		<!--모달갤러리 -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="scripts.js"></script>
 
-  <LINK REL="STYLESHEET" HREF="./style/GALLERY/GALLERY.CSS">
-  <!-- 슬라이드갤러리 -->
-  <link rel="stylesheet" href="./style/gallery/00_flickity.css">
-  <script src="./style/gallery/00_flickity.pkgd.js" async></script>
+		<!--스크롤 모션 -->
+		<script src="./style/scrollMotion.js" async></script>
+		<!--텍스트를 접었다 폈다 하는 기능 -->
+		<script src="./style/caption.js"></script>
 
-  <!--모달갤러리 -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="scripts.js"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" href="./style/default.css" />
+		<link rel="stylesheet" href="./style/page.css" />
+	</head>
 
-  <!--스크롤 모션 -->
-  <script src="./style/scrollMotion.js" async></script>
-  <!--텍스트를 접었다 폈다 하는 기능 -->
-  <script src="./style/caption.js"></script>
+	<body>
+		<header>
+			<a class="header_name" href="./work-all.html"> Younghyun Song </a>
 
+			<div class="header_menu">
+				<a id="menu" href="./work-all.html">Work</a>
+				<a id="menu" href="./05_about.html">About</a>
+			</div>
+		</header>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./style/default.css">
-  <link rel="stylesheet" href="./style/page.css">
+		<div class="container">
+			<div class="youtube">
+				<iframe
+					width="100%"
+					height="100%"
+					src="https://www.youtube.com/embed/h6F3Z8lvr8M?modestbranding=1&autoplay=1&mute=1&version=3&loop=1&playlist=h6F3Z8lvr8M&showinfo=0"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
 
+			<div class="project-info">
+				<div class="info_left">
+					<div class="title">
+						Sensual Powder Matte 2020FW <br />
+						3d Motion Film
+					</div>
+				</div>
 
-</head>
+				<div class="info_right">
+					<div class="caption">
+						아모레퍼시픽 럭셔리브랜드 Division에 소속되어 <br />
+						Hera, 설화수, AP 등의 브랜드 컨텐츠 제작에 기획 및 디자인으로
+						참여했습니다.
+					</div>
 
-<body>
-  <header>
-    <a class="header_name" href="./work-all.html">
-      Younghyun Song
-    </a>
+					<div class="info-credit">
+						<div class="credit_box">
+							<div class="credit_1">Field</div>
+							<div class="credit_2">Film</div>
+						</div>
 
-    <div class="header_menu">
-      <a id="menu" href="./work-all.html">Work</a>
-      <a id="menu" href="./05_about.html">About</a>
-    </div>
-  </header>
+						<div class="credit_box">
+							<div class="credit_1">Date</div>
+							<div class="credit_2">Dec 2020</div>
+						</div>
 
-  <div class="container">
-    <div class="youtube">
-      <iframe width="100%" height="100%"
-        src="https://www.youtube.com/embed/h6F3Z8lvr8M?modestbranding=1&autoplay=1&mute=1&version=3&loop=1&playlist=h6F3Z8lvr8M&showinfo=0"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+						<div class="credit_box">
+							<div class="credit_1">Team</div>
+							<div class="credit_2">
+								Design and Editing: Younghyun Song
+								<br />Art Direction: Sehyoung Lee <br />3d Modeling & Rendering:
+								Anna Kim <br />Project Management: BM, Hera
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-    <div class="project-info">
-      <div class="info_left">
-        <div class="title">
-          Sensual Powder Matte 2020FW <br>
-          3d Motion Film
-        </div>
-      </div>
+			<div class="mid_text">
+				<span id="underline"></span>
+				영상 오류가 발생했을 경우 새로고침 하시면 재생할 수 있습니다.
+			</div>
 
-      <div class="info_right">
-        <div class="caption">
-          아모레퍼시픽 럭셔리브랜드 Division에 소속되어 <br>
-          Hera, 설화수, AP 등의 브랜드 컨텐츠 제작에 기획 및 디자인으로 참여했습니다.
-        </div>
+			<!-- 라이트박스 HTML 구조 -->
+			<div id="lightbox" class="lightbox">
+				<div class="lightbox-center">
+					<span class="close">&times;</span>
+					<img class="lightbox-content" id="lightbox-img" />
+				</div>
+			</div>
+		</div>
 
-
-        <div class="info-credit">
-          <div class="credit_box">
-            <div class="credit_1">Field</div>
-            <div class="credit_2">Film</div>
-          </div>
-
-          <div class="credit_box">
-            <div class="credit_1">Date</div>
-            <div class="credit_2">Dec 2020</div>
-          </div>
-
-          <div class="credit_box">
-            <div class="credit_1">Team</div>
-            <div class="credit_2">
-              Design and Editing: Younghyun Song
-              <br>Art Direction: Sehyoung Lee
-              <br>3d Modeling & Rendering: Anna Kim
-              <br>Project Management: BM, Hera
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mid_text">
-      <span id="underline"></span>
-      영상 오류가 발생했을 경우 새로고침 하시면 재생할 수 있습니다.
-    </div>
-
-    <!-- 라이트박스 HTML 구조 -->
-    <div id="lightbox" class="lightbox">
-      <div class="lightbox-center">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-      </div>
-    </div>
-
-  </div>
-
-  <footer>
-    © Younghyun Song. 2025
-    <br>
-    <span id="underline">
-      <a href="mailto:" yhyun4156@gmail.com>mail.</a><br>
-      <a href="https://www.instagram.com/youhyus/" target="_blank">ig.</a> <br>
-    </span>
-  </footer>
-
-</body>
-
+		<footer>
+			© Younghyun Song. 2025
+			<br />
+			<span id="underline">
+				<a href="mailto:" yhyun4156@gmail.com>mail.</a><br />
+				<a href="https://www.instagram.com/youhyus/" target="_blank">ig.</a>
+				<br />
+			</span>
+		</footer>
+	</body>
 </html>

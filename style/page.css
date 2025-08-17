@@ -37,12 +37,12 @@ body .container .project-info .info_left {
 body .container .project-info .info_left .title {
   font-size: 3rem;
   letter-spacing: -0.01em;
-  line-height: 1.25em;
+  line-height: 1.2em;
 }
 body .container .project-info .info_right {
   flex: 1;
   padding-right: 5vw;
-  line-height: 1.55em;
+  line-height: 1.45em;
   /* 연결 페이지가 있는 경우 */
   /* 크레딧 */
 }
@@ -79,7 +79,7 @@ body .container .project-info .info_right .info-page {
   color: gray;
   margin-bottom: 1.5em;
   font-size: 1.05rem;
-  line-height: 1.55em;
+  line-height: 1.45em;
 }
 body .container .project-info .info_right .info-page a:hover {
   opacity: 0.5;
@@ -90,7 +90,7 @@ body .container .project-info .info_right .credit_box {
   margin-top: 0.4em;
   padding-top: 0.4em;
   font-size: 1.05rem;
-  line-height: 1.55em;
+  line-height: 1.45em;
 }
 body .container .project-info .info_right .credit_box .credit_1 {
   width: 30%;
@@ -102,7 +102,7 @@ body .container .mid_text {
   color: black;
   text-align: center;
   padding: 3.5vh 0 6vh 0;
-  font-size: 0.765vw;
+  font-size: 0.935vw;
 }
 body .container .mid_text a:hover {
   opacity: 0.5;

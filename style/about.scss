@@ -1,86 +1,83 @@
-$default-f: 0.9vw;
+$default-f: 1.1vw;
 $mobile-f: 3.9vw;
 // line height
 $lh: 1.45em;
 $titlelh: 1.3em;
-$padding: 0 2.5vw 0 2.5vw;
-$vh-space: 4vh;
+$padding: 0 1.2vw 0 1.2vw;
+$vh-space: 3vh;
 
 body {
-  .container {
-    margin-bottom: 7rem;
-    display: flex;
+	.container {
+		margin-bottom: 7rem;
+		display: flex;
 
-    .AboutInfo {
-      width: 50%;
-      padding-right: 2.5vw;
+		.AboutInfo {
+			width: 50%;
+			padding-right: 2.5vw;
 
-      .title {
-        font-size: 3rem;
-        line-height: $titlelh;
-        margin-bottom: 0.5em;
-      }
+			.title {
+				font-size: 3rem;
+				line-height: $titlelh;
+				margin-bottom: 0.5em;
+			}
 
-      .contact {
-        a {
-          color: var(--gray);
-        }
-      }
-    }
+			.contact {
+				a {
+					color: var(--gray);
+				}
+			}
+		}
 
-    .YearInfo {
-      flex: 1;
-      padding-right: 3em;
+		.YearInfo {
+			flex: 1;
+			padding-right: 3em;
 
-      .list_year {
-        display: flex;
-        border-top: .75px solid black;
-        padding: .9em 0;
+			.list_year {
+				display: flex;
+				border-top: 0.75px solid black;
+				padding: 0.9em 0;
 
+				.li_1 {
+					width: 10vw;
+				}
 
-        .li_1 {
-          width: 10vw;
-        }
+				.li_2 {
+					flex: 1;
+					line-height: 1.5em;
 
-        .li_2 {
-          flex: 1;
-          line-height: 1.5em;
+					.li_2-2 {
+						border-top: 0.75px solid rgb(155, 155, 155);
+						padding-top: 0.9em;
+						margin-top: 0.9em;
+					}
 
-          .li_2-2 {
-            border-top: 0.75px solid rgb(155, 155, 155);
-            padding-top: .9em;
-            margin-top: .9em;
-          }
+					.list-style {
+						li {
+							list-style-type: "-   ";
+							left: 2.2em;
+						}
+					}
+				}
 
-          .list-style {
-            li {
-              list-style-type: '-   ';
-              left: 2.2em;
-            }
-          }
-        }
-
-        .WorkTitle {
-          font-family: "HALRepostItalic";
-        }
-      }
-    }
-  }
-
-
+				.WorkTitle {
+					font-family: "HALRepostItalic";
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 700px) {
-  body {
-    .container {
-      .AboutInfo {
-        margin-bottom: 3.2rem;
+	body {
+		.container {
+			.AboutInfo {
+				margin-bottom: 3.2rem;
 
-        .title {
-          font-size: 1.75rem;
-          margin-bottom: 1.1rem;
-        }
-      }
-    }
-  }
+				.title {
+					font-size: 1.75rem;
+					margin-bottom: 1.1rem;
+				}
+			}
+		}
+	}
 }

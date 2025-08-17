@@ -1,23 +1,20 @@
-$default-f: 0.9vw;
+$default-f: 1.1vw;
 $mobile-f: 3.9vw;
-// line height
+
 $lh: 1.45em;
-$titlelh: 1.25em;
-$padding: 0 2.5vw 0 2.5vw;
+$titlelh: 1.2em;
+$padding: 0 1.2vw 0 1.2vw;
 $vh-space: 3vh;
 
 #underline {
 	text-decoration: underline;
 }
 
-/* WORK 인덱스 */
 body {
 	.category {
 		margin-bottom: $vh-space;
-
-		font-size: 1.8rem;
+		font-size: 1.3rem;
 		letter-spacing: -0.03em;
-
 		color: var(--gray);
 
 		.selected {
@@ -25,7 +22,7 @@ body {
 		}
 
 		> a {
-			margin-right: 1.25em;
+			margin-right: 0.7em;
 		}
 
 		> a:hover {
@@ -34,132 +31,80 @@ body {
 		}
 	}
 
-	/* 바디 내용 시작 web web 웹 */
 	.container {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5vw; // 요소 사이의 간격을 설정
-		// 만약 gap 속성을 지원하지 않는 브라우저를 고려한다면 margin을 사용할 수 있음
-
+		gap: 2vw;
 		margin-bottom: 4em;
-		// footer와 간격
+		align-items: center; // ✅ row 세로 정렬 핵심
 
 		.box {
-			position: relative; // 텍스트를 절대 위치로 배치하기 위해 필요
-			width: calc((100% - 1vw * 2) / 3);
-			/* 각 요소 사이의 간격 */
+			width: calc((100% - 2vw * 2) / 3);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 
 			.thumbnail-box {
-				height: 21vw;
-				overflow: hidden;
-
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				// position: relative;
+				// width: 100%;
+				// display: flex;
+				// flex-direction: column;
+				// justify-content: center; // ✅ 이미지 세로 중앙 정렬
+				// align-items: center;
 
 				> img {
 					width: 100%;
-					height: 100%;
-					overflow: hidden;
-					/* 이미지 정 사이즈 */
-					object-fit: cover;
-					transition: transform 0.2s linear; // 스케일 변화에 부드러운 트랜지션 추가
+					height: auto;
+					max-height: 60vh;
+					object-fit: contain;
+					// 이미지비율 바뀌지 않도록
 				}
 
-				// 텍스트 컨테이너를 절대 위치로 배치
 				.text-container {
-					position: absolute; // .box 내부에서 절대 위치로 설정
-					top: 0; // .box의 하단에 맞춤
-					left: 0; // .box의 왼쪽에 맞춤
-					width: 100%; // .box의 전체 너비
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
 					height: 100%;
-					padding: 3.8em;
-					color: rgb(0, 0, 0); // 텍스트 색상
+					padding: 2em;
 
-					font-size: 2.5rem; // 폰트 크기 확대
-					line-height: 1.2em;
-					text-align: center; // 텍스트 중앙 정렬
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
 
-					display: none; // 기본적으로 숨김
-					z-index: 1; // 텍스트가 이미지 위에 표시되도록 함
-					transition: opacity 0.2s linear; // 텍스트의 트랜지션 추가
+					opacity: 0;
+					pointer-events: none;
+					transition: opacity 0.15s linear;
+					z-index: 1;
 
-					#continued {
-						position: absolute;
-						bottom: 1em;
+					.text-container-title {
+						color: rgb(0, 0, 0);
+						font-size: 1.6rem;
+						line-height: 1.2em;
+						margin-bottom: 0.3em;
+					}
 
-						font-size: 0.6em;
-						color: var(--gray);
+					.text-container-sub {
+						color: rgb(0, 0, 0);
+						font-size: 1.2rem;
+						line-height: 1.2em;
 					}
 
 					#award {
 						position: absolute;
-						top: 0.48em; // .box의 하단에 맞춤
-						left: 0.5em; // .box의 왼쪽에 맞춤
-						width: 13%; // .box의 전체 너비
+						bottom: 0.48em;
+						left: 0.5em;
+						width: 13%;
 						height: auto;
 					}
 				}
 
 				&:hover {
-					> img {
-						transform: scale(1.03); // 마우스를 올렸을 때 이미지 확대
-					}
-
 					.text-container {
-						display: flex;
-						justify-content: center; // 가로 중앙 정렬
-						align-items: center; // 세로 중앙 정렬
-					}
-				}
-			}
-		}
-	}
-}
-
-/* 모바일사이즈  모바일사이즈  모바일사이즈 */
-@media only screen and (max-width: 700px) {
-	body {
-		.category {
-			width: 90vw;
-			margin-top: 3rem;
-			line-height: 1.6em;
-			font-size: 1.1rem;
-
-			> a {
-				margin-right: 0.8em;
-			}
-		}
-
-		/* 바디  바디  바디 mobile */
-		.container {
-			gap: 0.5em; // 요소 사이의 간격을 설정
-
-			.box {
-				width: 100%;
-
-				.thumbnail-box {
-					height: 19.25rem;
-					flex-direction: column;
-
-					.text-container {
-						position: relative; // 절대 위치 제거
-						top: auto; // 기존 top 속성 제거
-						left: auto; // 기존 left 속성 제거
-						display: flex;
-						justify-content: center; // 가로 중앙 정렬
-						align-items: center; // 세로 중앙 정렬
-
-						padding: 0.85em 2em 2em; // 텍스트 상하 간격 조정
-						height: auto;
-
-						font-size: 1em;
-						background-color: unset !important;
-
-						#award {
-							top: -4.4em;
-							width: 4em;
-						}
+						opacity: 1;
+						pointer-events: auto;
 					}
 				}
 			}

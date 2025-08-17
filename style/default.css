@@ -12,18 +12,27 @@
 /* 한글 폰트 */
 @font-face {
   font-family: "gothica1";
+  src: url(../source_default/Gothica1/GothicA1-Light.ttf);
+  font-weight: 300;
+  size-adjust: 94%;
+}
+@font-face {
+  font-family: "gothica1";
   src: url(../source_default/Gothica1/GothicA1-Medium.ttf);
   font-weight: 500;
+  size-adjust: 94%;
 }
 @font-face {
   font-family: "gothica1";
   src: url(../source_default/Gothica1/GothicA1-SemiBold.ttf);
   font-weight: 600;
+  size-adjust: 94%;
 }
 @font-face {
   font-family: "gothica1";
   src: url(../source_default/Gothica1/GothicA1-ExtraBold.ttf);
   font-weight: 800;
+  size-adjust: 94%;
 }
 /* 영문 폰트 "barlow" */
 * {
@@ -62,7 +71,7 @@ img {
 }
 
 html {
-  font-size: 0.88vw;
+  font-size: 1.1vw;
   line-height: 1.45em;
 }
 
@@ -78,7 +87,7 @@ body header {
   z-index: 100;
 }
 body header .header_name {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   letter-spacing: -0.03em;
   position: fixed;
   z-index: 1000;
@@ -89,7 +98,7 @@ body header .header_name:hover {
   color: var(--blue);
 }
 body header .header_menu {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   letter-spacing: -0.03em;
   position: absolute;
   right: 0.25rem;
