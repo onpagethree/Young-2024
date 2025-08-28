@@ -10,6 +10,7 @@ $mobile-f: 3.9vw;
 $lh: 1.45em;
 $titlelh: 1.2em;
 $padding: 0 1.2vw 0 1.2vw;
+$padding-mobile: 0 2vw 0 2vw;
 $vh-space: 3vh;
 
 #underline {
@@ -188,19 +189,19 @@ body {
 		line-height: $lh;
 
 		body {
-			padding: $padding;
+			padding: $padding-mobile;
 
 			header {
 				margin: 2vh 0 4rem 0;
 
 				.header_name {
-					font-size: 1.2rem;
+					font-size: 1.5rem;
 					position: relative;
 				}
 
 				/*HEADER 헤더 모바일사이즈*/
 				.header_menu {
-					font-size: 1.2rem;
+					font-size: 1.5rem;
 				}
 
 				#menu {
@@ -210,11 +211,10 @@ body {
 
 			/* FOOTER 하단바 모바일사이즈 */
 			footer {
-				font-size: 0.6rem;
-				padding-bottom: calc($vh-space / 2.5);
+				padding-bottom: 2vw;
 
 				#underline {
-					margin-top: -2vw;
+					margin-top: -0.5vw;
 				}
 			}
 		}
